@@ -1,0 +1,14 @@
+#dashboard,
+#product_form {
+       display: none;
+}
+
+
+#logo {
+       display: flex;
+       align-items: center;
+}
+
+#logo>span {
+       font-size: 30px;
+}

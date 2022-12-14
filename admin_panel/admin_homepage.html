@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Admin Homepage</title>
+       <link rel="shortcut icon" href="../favicon.ico">
+       <link rel="stylesheet" href="style/admin.css">
+</head>
+
+<body>
+       <div id="logo">
+              <img src="resource_admin/digital-basket_preview.png" alt="" width="100px"><span>Digital Basket</span>
+       </div>
+       <div class="container">
+
+              <div id="info_wrapper">
+                     <div id="login">
+                            <form autocomplete="on">
+                                   <h2>Log in</h2>
+                                   <p>
+                                          <label for="username" class="uname" data-icon="u"> Your email or username
+                                          </label>
+                                          <input id="username" name="username" required="required" type="text"
+                                                 placeholder="myusername or mymail@mail.com" />
+                                   </p>
+                                   <p>
+                                          <label for="password" class="youpasswd" data-icon="p"> Your password </label>
+                                          <input id="password" name="password" required="required" type="password"
+                                                 placeholder="eg. X8df!90EO" />
+                                   </p>
+                                   <p class="login button">
+                                          <input type="submit" value="Login" />
+                                          <a href="#dashboard"></a>
+                                   </p>
+                            </form>
+                     </div>
+                     <div id="dashboard" class="animate form">
+                            <div id="message">
+                                   <h2>Hello Admin!</h2>
+                            </div>
+                            <button id="get_products"> Get Products </button>
+                            <button id="add_products"> Add Products </button>
+                     </div>
+              </div>
+              <div id="products_wrapper">
+                     <!-- <div id="products">
+                            <img src="" alt="" id="img-src">
+                            <h2 id="title"></h2>
+                            <h3 id="price"></h3>
+                            <p id="desc"></p>
+                     </div> -->
+              </div>
+              <div id="product_form">
+                     <!-- <form action="">
+                            <input type="text" placeholder="Title" id="title">
+                            <input type="text" placeholder="Price" id="price">
+                            <input type="text" placeholder="image_src" id="img">
+                             <input type="text" placeholder="Description" id="desc"> 
+                            <input type="submit">
+                     </form> -->
+                     <form>
+                            <h2>Add Product</h2>
+                            <p>
+                                   <label for="title" class="title" data-icon="u"> Product Title
+                                   </label>
+                                   <input id="title" name="title" required="required" type="text"
+                                          placeholder="product title" />
+                            </p>
+                            <p>
+                                   <label for="price" class="pprice" data-icon="p"> Product Price </label>
+                                   <input id="price" name="price" required="required" type="text"
+                                          placeholder="eg. $169.00" />
+                            </p>
+                            <p>
+                                   <label for="image" class="pimg" data-icon="p"> Product Image Source </label>
+                                   <input id="img" name="image" required="required" type="text"
+                                          placeholder="image source" />
+                            </p>
+                            <p class="login button">
+                                   <input type="submit" value="Submit" />
+                            </p>
+                     </form>
+              </div>
+       </div>
+</body>
+<script src="script/admin.js"></script>
+
+</html>

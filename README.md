@@ -5,3 +5,4 @@
  - keep your id and class names obvious and bit long so that there won't be any conflicts in classes and ids.
  - Don't hard code any layout component.
  - Use connectors 
+ - use clean nested structure

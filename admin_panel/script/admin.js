@@ -1,11 +1,12 @@
 let login_div = document.querySelector("#login");
 let dashboard = document.querySelector("#dashboard");
-let login_button = document.querySelector("form");
+let login_button = document.querySelector("#login_form");
 let products = document.querySelector("#products_wrapper");
 let add_products = document.querySelector("#add_products");
 let addProduct = document.querySelector("#product_form");
 let add_product_form = document.querySelector("#product_form>form");
 let remove_product = document.querySelector(".products");
+let get_products = document.querySelector("#get_products");
 
 // adding event listener to login button
 login_button.addEventListener("submit", login);
@@ -45,12 +46,13 @@ async function show_data() {
                      <h2 id="title">${element.title}</h2>
                      <h3 id="price">${element.price}</h3>
                      <p id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet optio neque cumque vero ullam dolor quo ad nulla repellat. Ad odit reprehenderit accusamus optio cupiditate in inventore nesciunt vel error.</p>
-                     <button class="remove" onclick="handleDelete(this)">Remove</button>
+                     <button class="remove" class="yl_btn" onclick="handleDelete(this)">Remove</button>
               </div>
               `
        });
        products.innerHTML = show_data.join(" ");
 
+       // adding event listener to remove button
        let all_delete_btn = document.querySelectorAll(".products");
        for (let btn of all_delete_btn) {
               btn.addEventListener("click", (event) => {
@@ -60,6 +62,17 @@ async function show_data() {
                      // DeleteBtn(data_id);
               });
        }
+}
+
+// Adding event listener to get product button
+get_products.addEventListener("click", get_product_list)
+
+async function get_product_list() {
+
+       // addProduct.style.display = "none";
+       // products.style.display = "block";
+
+       // show_data();
 }
 
 // Adding event listener to add product button
@@ -78,16 +91,16 @@ add_product_form.addEventListener("submit", post_product);
 async function post_product(event) {
        event.preventDefault();
 
-       let title = document.querySelector("#product_form #title").value;
-       let price = document.querySelector("#product_form #price").value;
-       let image = document.getElementById("img").value;
-
+       let title = document.getElementById("add_title").value;
+       let price = document.getElementById("add_price").value;
+       let image = document.getElementById("add_img").value;
+       console.log(title, price, image)
        let obj = {
               title: title,
               price: price,
               img_src: image,
        }
-       console.log(obj)
+       // console.log(obj)
 
        let request = fetch("https://6398c0f229930e2bb3c11afd.mockapi.io/mobiles", {
               method: "POST",
@@ -96,7 +109,7 @@ async function post_product(event) {
               },
               body: JSON.stringify(obj)
        })
-
+       console.log(request)
        alert("Product Added Successfully");
        show_data();
 

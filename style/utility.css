@@ -17,10 +17,9 @@
     line-height: 16.9px;
     font-size: 13px;
     font-weight: 600;
-    display: inline-flex;
-    align-items: center;
     border-radius: 4px;
     background: #ffe000;
     padding: 8px;
     border: none;
+    text-align: center;
 }

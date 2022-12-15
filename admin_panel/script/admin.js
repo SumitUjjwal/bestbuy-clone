@@ -11,6 +11,7 @@ let add_product = document.querySelector("#add_product");
 let add_product_form = document.querySelector("#product_form>form");
 let remove_product = document.querySelector(".products");
 let get_products = document.querySelector("#get_products");
+let get_products_by_category = document.getElementById("get_products");
 
 // adding event listener to login button
 login_form.addEventListener("submit", login);
@@ -18,26 +19,19 @@ login_form.addEventListener("submit", login);
 // function for login
 async function login(event) {
        event.preventDefault();
-       // let username = document.getElementById("username").value;
-       // let password = document.getElementById("password").value;
-
-       // let obj = {
-       //        username : username,
-       //        password : password
-       // }
 
        alert("Logged In Successfully")
 
        admin_container.style.display = "none";
        dashboard_container.style.display = "flex";
-       show_data();
+       show_data("mobiles");
 }
 
 // // function for rendering data on DOM
-async function show_data() {
-       let request = await fetch("https://6398c0f229930e2bb3c11afd.mockapi.io/mobiles");
+async function show_data(category) {
+       let request = await fetch(`https://6398c0f229930e2bb3c11afd.mockapi.io/${category}`);
        let data = await request.json();
-       console.log(data)
+       // console.log(data)
 
        products.innerHTML = "";
        let show_data = data.map((element) => {
@@ -59,15 +53,6 @@ async function show_data() {
 
 }
 
-
-
-// Adding event listener to get product button
-get_products.addEventListener("click", get_product_list)
-
-async function get_product_list() {
-       show_data();
-}
-
 // Adding event listener to add product form
 add_product.addEventListener("submit", post_product);
 
@@ -78,6 +63,10 @@ async function post_product(event) {
        let title = document.getElementById("add_title").value;
        let price = document.getElementById("add_price").value;
        let image = document.getElementById("add_img").value;
+       let cat = document.getElementById("add_cat").value;
+
+       let category = cat.toLowerCase();
+       // console.log(category)
 
        let obj = {
               title: title,
@@ -85,7 +74,7 @@ async function post_product(event) {
               img_src: image,
        }
 
-       let request = fetch("https://6398c0f229930e2bb3c11afd.mockapi.io/mobiles", {
+       let request = fetch(`https://6398c0f229930e2bb3c11afd.mockapi.io/${category}`, {
               method: "POST",
               headers: {
                      "Content-Type": "application/json"
@@ -94,7 +83,7 @@ async function post_product(event) {
        })
 
        alert("Product Added Successfully");
-       show_data();
+       show_data(category);
 
 }
 
@@ -111,6 +100,14 @@ async function handleDelete(id) {
        console.log(request)
        if (request.ok) {
               console.log("Removed")
-              show_data();
+              show_data("mobiles");
        }
+}
+
+get_products_by_category.addEventListener("change", products_category);
+
+async function products_category() {
+       let select_value = get_products_by_category.value;
+       console.log(select_value)
+       show_data(select_value);
 }

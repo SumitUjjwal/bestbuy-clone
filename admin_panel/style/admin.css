@@ -76,7 +76,8 @@
 }
 
 .dashboard_container>div:nth-child(1)>form>input,
-input {
+input,
+.dashboard_container>div:nth-child(1)>form>select {
   padding: 10px;
   font-size: 20px;
   border: 1px solid #565758;

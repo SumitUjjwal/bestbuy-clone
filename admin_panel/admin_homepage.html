@@ -42,7 +42,11 @@
                      <div id="message">
                             <h2>Hello Admin!</h2>
                      </div>
-                     <button class="yl_btn" id="get_products"> Get Products </button>
+                     <!-- <button class="yl_btn" id="get_products"> Get Products </button> -->
+                     <select class="yl_btn" name="get_products" id="get_products" value="Get Products By Category">
+                            <option value="mobiles">Smart Phones</option>
+                            <option value="laptops">Laptops</option>
+                     </select>
                      <button class="yl_btn" id="get_products"> Get Costumers </button>
                      <form id="add_product">
                             <h2>Add Product</h2>
@@ -59,6 +63,15 @@
                             </label>
                             <input id="add_img" name="image" required="required" type="text"
                                    placeholder="eg. https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6496/6496780_sd.jpg;maxHeight=200;maxWidth=300" />
+
+                            <label for="category" class="pcat" data-icon="p" overflow="hidden"> Product Category
+                            </label>
+                            <!-- <input type="text" id="add_cat" name="category" required="required"
+                                   placeholder="eg. Mobile, Laptop"> -->
+                            <select name="category" id="add_cat" required="required" value="Get Products By Category">
+                                   <option value="mobiles">Smart Phones</option>
+                                   <option value="laptops">Laptops</option>
+                            </select>
 
                             <input type="submit" value="Add Product" />
 

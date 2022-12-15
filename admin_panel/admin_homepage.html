@@ -8,49 +8,53 @@
        <title>Admin Homepage</title>
        <link rel="shortcut icon" href="../favicon.ico">
        <link rel="stylesheet" href="style/admin.css">
+       <link rel="stylesheet" href="/obnoxious-ladybug-6279/style/utility.css">
 </head>
 
 <body>
-       <div id="logo">
-              <img src="resource_admin/digital-basket_preview.png" alt="" width="100px"><span>Digital Basket</span>
+       <div id="admin_nav">
+              <div id="admin_page_logo">
+                     <img src="resource_admin/Digital_basket_white (1).png" alt="" width="100px"><span></span>
+              </div>
        </div>
-       <div class="container">
+       <div class="admin_container">
 
               <div id="info_wrapper">
                      <div id="login">
-                            <form autocomplete="on">
-                                   <h2>Log in</h2>
+                            <form autocomplete="on" id="login_form">
+                                   <h2>Sign In to Digital Basket</h2>
                                    <p>
-                                          <label for="username" class="uname" data-icon="u"> Your email or username
-                                          </label>
+                                          <!-- <label for="username" class="uname" data-icon="u"> Your email or username
+                                          </label> -->
                                           <input id="username" name="username" required="required" type="text"
                                                  placeholder="myusername or mymail@mail.com" />
                                    </p>
                                    <p>
-                                          <label for="password" class="youpasswd" data-icon="p"> Your password </label>
+                                          <!-- <label for="password" class="youpasswd" data-icon="p"> Your password </label> -->
                                           <input id="password" name="password" required="required" type="password"
                                                  placeholder="eg. X8df!90EO" />
                                    </p>
                                    <p class="login button">
-                                          <input type="submit" value="Login" />
+                                          <input type="submit" value="Login" class="submit" />
                                           <a href="#dashboard"></a>
                                    </p>
                             </form>
                      </div>
-                     <div id="dashboard" class="animate form">
+                     <div id="dashboard">
                             <div id="message">
                                    <h2>Hello Admin!</h2>
                             </div>
-                            <button id="get_products"> Get Products </button>
-                            <button id="add_products"> Add Products </button>
+                            <button class="yl_btn" id="get_products"> Get Products </button>
+                            <button class="yl_btn" id="add_products"> Add Products </button>
                      </div>
               </div>
               <div id="products_wrapper">
-                     <!-- <div id="products">
+                     <!-- <div class="products">
                             <img src="" alt="" id="img-src">
                             <h2 id="title"></h2>
                             <h3 id="price"></h3>
                             <p id="desc"></p>
+                            <button class="remove" onclick="handleDelete(this)">Remove</button>
                      </div> -->
               </div>
               <div id="product_form">
@@ -66,17 +70,17 @@
                             <p>
                                    <label for="title" class="title" data-icon="u"> Product Title
                                    </label>
-                                   <input id="title" name="title" required="required" type="text"
+                                   <input id="add_title" name="title" required="required" type="text"
                                           placeholder="product title" />
                             </p>
                             <p>
                                    <label for="price" class="pprice" data-icon="p"> Product Price </label>
-                                   <input id="price" name="price" required="required" type="text"
+                                   <input id="add_price" name="price" required="required" type="text"
                                           placeholder="eg. $169.00" />
                             </p>
                             <p>
                                    <label for="image" class="pimg" data-icon="p"> Product Image Source </label>
-                                   <input id="img" name="image" required="required" type="text"
+                                   <input id="add_img" name="image" required="required" type="text"
                                           placeholder="image source" />
                             </p>
                             <p class="login button">

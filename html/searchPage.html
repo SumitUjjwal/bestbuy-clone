@@ -1,27 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="searchPage.css">
+    <link rel="stylesheet" href="../style/searchPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <input id="entr" type="text" placeholder="search here">
     <button id="search">Search</button>
     <div id="container">
-        <div class="item">
-        <div class="img"><img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6468/6468089_rd.jpg;maxHeight=200;maxWidth=300"></div>
-        <div class="info">
-        
+        <div id="menu-sec"></div>
+        <div id="whole_prod">
+            <div id="item">
+                <div id="prod_img">
+                    <img
+                        src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6468/6468089_rd.jpg;maxHeight=200;maxWidth=300">
+                </div>
+                <div id="prod_info">
+                    <div id="spnson">Sponsored</div>
+                    <a id="prod_name">Samsung - Galaxy A32 5G 64GB (T-Mobile) - Black
+                    </a>
+                    <div id="model_det">
+                        <div id="model_sku">
+                            <div>
+                                <span class="mdl">Model:</span>
+                                <span class="mdl_val"> SM-A326UZKNTMB</span>
+                            </div>
+                            <div>
+                                <span class="mdl">SKU:</span>
+                                <span class="mdl_val"> 6464389</span>
+                            </div>
+                        </div>
+                        <div id="rtng">
+                            <div class="ratings-reviews">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class=" fa fa-star fa-solid fa-star-half-stroke"></span>
+                                <span class="fa fa-star"></span>
+                                <span aria-hidden="true" class="c-reviews ">(14)</span>
+                            </div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="prod_price"></div>
         </div>
-        <div class="price"></div>
-            </div>
-            </div>
-
+    </div>
+    </div>
     </div>
     </div>
 </body>
+
 </html>
-<script src="searchPage.js"></script>
+<script src="../script/searchPage.js"></script>

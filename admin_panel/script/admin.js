@@ -1,15 +1,19 @@
+// admin container
 let login_div = document.querySelector("#login");
+let admin_container = document.querySelector(".admin_container");
+
 let dashboard = document.querySelector("#dashboard");
-let login_button = document.querySelector("#login_form");
+let dashboard_container = document.querySelector(".dashboard_container");
+let login_form = document.querySelector("#login_form");
 let products = document.querySelector("#products_wrapper");
 let add_products = document.querySelector("#add_products");
-let addProduct = document.querySelector("#product_form");
+let add_product = document.querySelector("#add_product");
 let add_product_form = document.querySelector("#product_form>form");
 let remove_product = document.querySelector(".products");
 let get_products = document.querySelector("#get_products");
 
 // adding event listener to login button
-login_button.addEventListener("submit", login);
+login_form.addEventListener("submit", login);
 
 // function for login
 async function login(event) {
@@ -22,17 +26,14 @@ async function login(event) {
        //        password : password
        // }
 
-       // localStorage.setItem("")
+       alert("Logged In Successfully")
 
-       // alert("Logged In Successfully")
-
-       login_div.style.display = "none";
-       dashboard.style.display = "block";
-       // window.location.href = "#dashboard";
+       admin_container.style.display = "none";
+       dashboard_container.style.display = "flex";
        show_data();
 }
 
-// function for rendering data on DOM
+// // function for rendering data on DOM
 async function show_data() {
        let request = await fetch("https://6398c0f229930e2bb3c11afd.mockapi.io/mobiles");
        let data = await request.json();
@@ -41,51 +42,34 @@ async function show_data() {
        products.innerHTML = "";
        let show_data = data.map((element) => {
               return `
-              <div class="products" id=${element.id}>
-                     <img src="${element.img_src}" alt="" id="img-src">
-                     <h2 id="title">${element.title}</h2>
-                     <h3 id="price">${element.price}</h3>
-                     <p id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet optio neque cumque vero ullam dolor quo ad nulla repellat. Ad odit reprehenderit accusamus optio cupiditate in inventore nesciunt vel error.</p>
-                     <button class="remove" class="yl_btn" onclick="handleDelete(this)">Remove</button>
+              <div class="products">
+                     <div> 
+                            <img src="${element.img_src}" alt="" id="img-src">
+                     </div>
+                     <div>
+                            <h2 id="title">${element.title}</h2>
+                            <h3 id="price">${element.price}</h3>
+                            <p id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet optio neque cumque vero ullam dolor quo ad nulla repellat. Ad odit reprehenderit accusamus optio cupiditate in inventore nesciunt vel error.</p>
+                            <button class="yl_btn remove" onclick="handleDelete(${element.id})">Remove</button>
+                     </div>
               </div>
               `
        });
        products.innerHTML = show_data.join(" ");
 
-       // adding event listener to remove button
-       let all_delete_btn = document.querySelectorAll(".products");
-       for (let btn of all_delete_btn) {
-              btn.addEventListener("click", (event) => {
-                     let data_id = event.target.dataset.id;
-                     console.log(data_id, typeof data_id);
-                     // console.log(btn)
-                     // DeleteBtn(data_id);
-              });
-       }
 }
+
+
 
 // Adding event listener to get product button
 get_products.addEventListener("click", get_product_list)
 
 async function get_product_list() {
-
-       // addProduct.style.display = "none";
-       // products.style.display = "block";
-
-       // show_data();
-}
-
-// Adding event listener to add product button
-add_products.addEventListener("click", productForm);
-
-function productForm() {
-       products.style.display = "none";
-       addProduct.style.display = "block";
-       // window.location.href = "#product_form"
+       show_data();
 }
 
 // Adding event listener to add product form
-add_product_form.addEventListener("submit", post_product);
+add_product.addEventListener("submit", post_product);
 
 // function for adding product
 async function post_product(event) {
@@ -94,13 +78,12 @@ async function post_product(event) {
        let title = document.getElementById("add_title").value;
        let price = document.getElementById("add_price").value;
        let image = document.getElementById("add_img").value;
-       console.log(title, price, image)
+
        let obj = {
               title: title,
               price: price,
               img_src: image,
        }
-       // console.log(obj)
 
        let request = fetch("https://6398c0f229930e2bb3c11afd.mockapi.io/mobiles", {
               method: "POST",
@@ -109,24 +92,15 @@ async function post_product(event) {
               },
               body: JSON.stringify(obj)
        })
-       console.log(request)
+
        alert("Product Added Successfully");
        show_data();
 
-       products.style.display = "block";
-       addProduct.style.display = "none";
-       // window.location.href = "#products_wrapper"
-
 }
 
-// Handling Delete
-function handleDelete(e) {
-       let id = e.parentElement.id
-       DeleteBtn(id)
-}
 
-// calling Delete Button
-async function DeleteBtn(id) {
+// handling Delete Button
+async function handleDelete(id) {
 
        let request = await fetch(`https://6398c0f229930e2bb3c11afd.mockapi.io/mobiles/${id}`, {
               method: "DELETE",

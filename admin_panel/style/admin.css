@@ -4,13 +4,6 @@
   font-family: "Roboto", sans-serif;
 }
 
-
-
-#dashboard,
-#product_form {
-  display: none;
-}
-
 #admin_page_logo {
   display: flex;
   align-items: center;
@@ -22,123 +15,141 @@
 }
 
 .admin_container {
-  width: 90%;
+  width: 30%;
   margin: auto;
-  padding: 8% 10px;
-  display: flex;
-  justify-content: space-evenly;
-  gap: 10%;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
-label {
-  display: inline-block;
-  font-size: 12px;
-  font-style: italic;
+#info_wrapper {
+  width: 100%;
 }
 
 #login {
-  width: 300px;
-  height: 200px;
-  /* height: 100vh;
-  width: 100vh; */
-  /* border: 1px solid red; */
-  padding: 5% 0;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  margin: auto;
+  width: 100%;
 }
 
 #login>form {
-  display: grid;
-  /* border: 1px solid blue; */
-  justify-items: center;
-  /* gap: 1%; */
-  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-#username {
-  width: 200px;
-  /* margin: auto; */
-  line-height: 16.9px;
-  font-size: 13px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  border-radius: 4px;
-  padding: 8px;
-  border: none;
+#login>h1 {
+  text-align: center;
+  border-bottom: 1px solid grey;
+  margin-bottom: 20px;
 }
-
-#password {
-  width: 200px;
-  /* margin: auto; */
-  line-height: 16.9px;
-  font-size: 13px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  border-radius: 4px;
-  padding: 8px;
-  border: none;
-}
-
-.submit {
-  width: 200px;
-  margin: auto;
-  line-height: 16.9px;
-  font-size: 13px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  border-radius: 4px;
-  background: #ffe000;
-  padding: 8px;
-  border: none;
-}
-
 
 #admin_nav {
   background-color: #0046be;
   width: 100%;
   margin: auto;
+  margin-bottom: 50px;
   padding: 5px 30px;
-  position: fixed;
-  z-index: 2;
+  position: sticky;
+  top: 0px;
 }
 
+.dashboard_container {
+  width: 90%;
+  display: none;
+  justify-content: space-between;
+  margin: auto;
+}
 
-/* #products_wrapper {
-  border: 1px solid red;
-} */
+.dashboard_container>div:nth-child(1) {
+  width: 30%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+.dashboard_container>div:nth-child(1)>form {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.dashboard_container>div:nth-child(1)>form>input,
+input,
+.dashboard_container>div:nth-child(1)>form>select {
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid #565758;
+  border-radius: 4px;
+  outline: none;
+}
+
+.dashboard_container>div:nth-child(1)>form>h2 {
+  border-bottom: 1px solid grey;
+  margin: 20px 0;
+}
+
+.dashboard_container>div:nth-child(1)>form>input[type='submit'],
+input[type='submit'] {
+  margin-top: 10px;
+  background: #0046be;
+  color: white;
+  border-radius: 4px;
+}
+
+input[type='submit']:hover,
+button:hover {
+  cursor: pointer;
+  filter: brightness(80%);
+}
+
+.dashboard_container>div:nth-child(1)>form>label {
+  font-size: 20px;
+  margin: 10px 0;
+  font-weight: 400;
+}
+
+/* right - product section */
+
+.dashboard_container>div:nth-child(2) {
+  height: 80vh;
+  overflow-y: scroll;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
 
 .products {
-  /* border: 1px solid blue; */
-  margin: 3% 5%;
-  padding: 2% 5%;
   display: flex;
-  align-items: center;
-  column-gap: 5%;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  height: 300px;
+  margin: 30px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
-#products_wrapper .remove {
-  line-height: 16.9px;
-  font-size: 13px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  border-radius: 4px;
-  background: #ffe000;
-  padding: 8px;
-  border: none;
-  margin: 2% 0;
+.products>div:nth-child(1) {
+  width: 20%;
 }
 
-#dashboard {
-  width: 300%;
-  /* display: flex; */
-  gap: 50%;
-  position: fixed;
+.products>div:nth-child(1)>img {
+  width: 100%;
+  height: 100%;
+}
+
+.products>div:nth-child(2) {
+  padding-left: 20px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.remove {
+  width: 20%;
+
 }

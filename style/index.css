@@ -529,6 +529,7 @@ margin-bottom: 50px;
     padding: 20px;
     box-sizing: border-box;
     position: relative;
+    margin-bottom: 50px;
 }
 .bottom_banner_ad_container{
     display: flex;
@@ -598,4 +599,47 @@ margin-left: 20px;
     color: #ffffff;
     background: #0046be;
     outline: 0.3px solid white;
+}
+/* ------------- featured tv  */
+.featured_led{
+    width: 98%;
+    margin: auto;
+    border: 0.1px solid rgb(199, 194, 194);
+    padding: 20px 20px 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    border-radius: 4px;
+}
+.featured_led>div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+.featured_led>div>h3{
+    font-size: 20px;
+}
+.featured_led>div>span{
+    font-size: 13px;
+    color: grey;
+}
+.featured_led_container{
+    display: flex;
+    box-sizing: border-box;
+}
+.featured_led_container>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+.featured_led_container>div>img{
+    width: 70%;
+    margin-bottom: 20px;
+}
+.featured_led_container>div>span{
+    font-size: 15px;
+    margin-bottom: 4px;
+    text-align: left;
+    line-height: 20px;
+    color: #0046be;
 }

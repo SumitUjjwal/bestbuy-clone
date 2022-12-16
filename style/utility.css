@@ -12,6 +12,11 @@
     padding: 0 10px;
 }
 
+button{
+    transition-duration: 300ms;
+    cursor: pointer;
+}
+
 /* yellow button */
 .yl_btn {
     line-height: 16.9px;
@@ -22,4 +27,7 @@
     padding: 8px;
     border: none;
     text-align: center;
+}
+.yl_btn:hover{
+    background: #ffea4a;
 }

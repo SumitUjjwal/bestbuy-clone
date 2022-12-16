@@ -411,3 +411,18 @@ margin-top: 15px;
 }
 
 /* -------- bottom section services card */
+.bottomSection_services_container{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    margin-bottom: 32px;
+}
+.bottomSectoin_services_card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottomSectoin_services_card>img{
+    width: 20%;
+    margin-right: 10px;
+}

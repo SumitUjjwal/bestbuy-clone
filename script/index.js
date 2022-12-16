@@ -1,9 +1,10 @@
+// ---------- Rendering Top Section cards --------
 import data from "../resources/data_files/topSectionObjects.js"
 
 let topSectionCardsMain = document.querySelector('.topSection_cards_innerContainer')
 
 topSectionCardsMain.innerHTML = data.map(item => {
-  return  `
+    return `
     <div class="topSection_card_container">
         <a class="topSection_card_imgBox">
             <img src="${item.src}" alt="${item.title}">
@@ -15,26 +16,42 @@ topSectionCardsMain.innerHTML = data.map(item => {
     `
 }).join("")
 
+//-------- Bottom carousel ----------
+let leftBtn = document.querySelector('.bottom_carousel_prev_button');
+let rightBtn = document.querySelector('.bottom_carousel_next_button');
+let track = document.querySelector('.bottom_carousel_cards_track')
+let card = document.querySelector('.bottom_carousel_card')
+let cardWidth = card.getBoundingClientRect().width;
+let slideIndexNext = 1;
+let slideIndexPrev = 1;
+function moveForward() {
+
+    let moveVal = cardWidth * slideIndexNext;
+    if (slideIndexNext >= 4) {
+        moveVal = 0;
+        slideIndexNext = 1;
+    }
+    track.style.transform = `translateX(-${moveVal}px)`
+    slideIndexNext++;
+}
+
+rightBtn.addEventListener('click', (e) => {
+        moveForward()
+})
+
+function moveBackward() {
+    let moveVal = cardWidth * slideIndexPrev;
+    if (slideIndexNext <= slideIndexPrev){
+        moveVal=0;
+    }
+    track.style.transform = `translateX(${moveVal}px)`
+    slideIndexPrev++;
+}
+
+leftBtn.addEventListener('click', (e) => {
+    moveBackward()
+})
 
 
-
-// ! Rendering Top Secion cards
-// let cards = []
-// let cards_title = ['Laptop']
-// let imgVal = 4;
-// for (let i = 0; i < 18; i++) {
-//     let card = `
-//     <div class="topSection_card_container">
-//         <a class="topSection_card_imgBox">
-//             <img src="resources/topSectionCards/img_${imgVal+i}.jpg" alt="">
-//         </a>
-//         <a href="" class="topSection_card_textBox">
-//              Laptops & Computers
-//         </a>
-//     </div>
-//     `
-//     cards.push(card)
-// }
-// topSectionCardsMain.innerHTML = cards.join("")
 
 

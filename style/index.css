@@ -521,3 +521,81 @@ margin-bottom: 50px;
     line-height: 18px;
     color: #0046be;
 }
+/* ------- bottom banner ad ---------- */
+.bottom_banner_ad{
+    width: 100%;
+    margin: auto;
+    background: #0046be;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+.bottom_banner_ad_container{
+    display: flex;
+    justify-content: center;
+}
+.bottom_banner_ad_container>div:nth-child(1){
+    width: 20%;
+    padding-right: 20px;
+}
+.bottom_banner_ad_container>div:nth-child(1)>img{
+    width: 100%;
+}
+.bottom_banner_ad_container>div:nth-child(2){
+    width: 25%;
+    padding-right: 20px;
+    border-right: 0.3px solid white;
+}
+.bottom_banner_ad_container>div:nth-child(2)>span{
+    color: white;
+    padding: 5px;
+    right: 49%;
+    top: 45%;
+    position: absolute;
+    background: #0046be;
+    font-size: 20px;
+    font-weight: 600;
+}
+.bottom_banner_ad_container>div>h3{
+    line-height: 20px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+.bottom_banner_ad_container>div>h1{
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 40px;
+    color: #fff200;
+}
+.bottom_banner_ad_container>div>p{
+    line-height: 21px;
+    margin: 8px 0;
+    color: #fff;
+}
+.bottom_banner_ad_container>div:nth-child(3)>span{
+    color: #fff;
+    font-size: 13px;
+}
+.bottom_banner_ad_container>div:nth-child(3){
+    padding-left: 30px;
+    width: 30%;
+}
+.bottom_banner_ad_container>div:nth-child(4){
+display: flex;
+align-items: center;
+margin-left: 20px;
+}
+.bottom_banner_ad_container>div:nth-child(4)>button{
+    background: #fff;
+    border: 1px solid #0046be;
+    border-radius: 4px;
+    color: #0046be;
+    font-weight: 500;
+    justify-content: center;
+    padding: 8px;
+}
+.bottom_banner_ad_container>div:nth-child(4)>button:hover{
+    color: #ffffff;
+    background: #0046be;
+    outline: 0.3px solid white;
+}

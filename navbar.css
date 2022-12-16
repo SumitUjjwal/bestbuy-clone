@@ -3,13 +3,15 @@ body {
 }
 
 #stickyNavbar {
-
+    position: sticky;
     display: flex;
     width: 100%;
     height: 70px;
     background-color: #0046be;
     align-items: center;
+
 }
+
 
 #stickyNavbar>div {
     color: white;
@@ -18,9 +20,14 @@ body {
 }
 
 #stickyNavbar>div:nth-child(1) {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     flex: 5%;
     margin-left: 5%;
+}
+
+#stickyNavbar>div:nth-child(1)>img {
+    width: 80%;
+    border-radius: 50%;
 }
 
 #stickyNavbar>div:nth-child(2) {
@@ -72,3 +79,59 @@ body {
     border-radius: 2px 0px 0px 2px;
 
 }
+
+
+
+    /* Dropdown Button */
+    .dropbtn {
+        background-color: #0046be;
+        color: white;
+        padding: 16px;
+        font-size: 20px;
+        border: none;
+      }
+      
+      /* The container <div> - needed to position the dropdown content */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      /* Dropdown Content (Hidden by Default) */
+      .dropdown-content {
+        display: none;
+        margin-top: 8px;
+        position: absolute;
+        background-color: #ffffff;
+        width: 300px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        font-size: 16px;
+        
+      }
+      
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        color: rgb(93, 51, 211);
+        padding: 12px 16px;
+        text-decoration:none;
+        display: block;
+        text-align: left;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+      }
+      .dropdown-content a:hover{
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      .dropdown-content h3{
+        color: black;
+        font-weight: lighter;
+        text-align: center;
+      } 
+  
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {display: block;}
+      
+      /* Change the background color of the dropdown button when the dropdown content is shown */
+      .dropdown:hover .dropbtn {background-color: #3b62e2;}

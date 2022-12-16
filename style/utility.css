@@ -14,6 +14,7 @@
 
 button{
     transition-duration: 300ms;
+    cursor: pointer;
 }
 
 /* yellow button */
@@ -26,4 +27,7 @@ button{
     padding: 8px;
     border: none;
     text-align: center;
+}
+.yl_btn:hover{
+    background: #ffea4a;
 }

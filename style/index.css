@@ -478,3 +478,39 @@ margin-bottom: 50px;
     border-right: 1px solid rgb(211, 209, 209);
     padding: 0 30px;
 }
+
+/* -------------gift ideas------------ */
+.bottom_giftIdeas{
+    width: 98%;
+    margin: auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+}
+.bottom_giftIdeas_card{
+    background: #d0d0d169;
+    padding: 24px;
+}
+.bottom_giftIdeas_card>h2{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    margin: 0 0 24px;
+}
+
+.giftIdea_cards_container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+.giftIdea_cards_container>div{
+    margin-bottom: 20px;
+}
+.giftIdea_cards_container>div>img{
+    width: 100%;
+}
+.giftIdea_cards_container>div>span{
+    font-size: 15px;
+    line-height: 18px;
+    color: #0046be;
+}

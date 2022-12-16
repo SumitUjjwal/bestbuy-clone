@@ -12,6 +12,10 @@
     padding: 0 10px;
 }
 
+button{
+    transition-duration: 300ms;
+}
+
 /* yellow button */
 .yl_btn {
     line-height: 16.9px;

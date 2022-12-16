@@ -479,12 +479,13 @@
     width: 100%;
     padding: 20px 0;
     /* border: 1px solid red; */
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .bottom_carousel_cards_track {
     width: 100%;
     display: flex;
+    transition-duration: 500ms;
     /* border: 1px solid red; */
 }
 
@@ -547,7 +548,7 @@
 }
 .bottom_carousel_prev_button>span{
     font-size: 50px;
-    color: grey;
+    color: rgb(179, 179, 179);
     cursor: pointer;
 }
 

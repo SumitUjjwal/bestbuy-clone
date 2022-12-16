@@ -288,17 +288,22 @@ justify-content: center;
 
 .middle_card_add{
     display: flex;
+    justify-content: space-evenly;
     margin-bottom: 50px;
     box-sizing: border-box;
 }
+.middle_card_add>div{
+    border: 0.3px solid grey;
+}
 .middle_card_add>div:nth-child(1){
-    width: 33.33%;
+    width: 31%;
 }
 .middle_card_add>div:nth-child(1)>img{
     width: 100%;
+    height: 100%;
 }
 .middle_card_add>div:nth-child(2){
-    width: 33.33%;
+    width: 31%;
     box-sizing: border-box;
 }
 .middle_card_add>div:nth-child(2)>img{
@@ -306,10 +311,11 @@ justify-content: center;
     height: 99.20%;
 }
 .middle_card_add>div:nth-child(3){
-    width: 33.33%;
+    width: 31%;
 }
 .middle_card_add>div:nth-child(3)>img{
     width: 100%;
+    height: 100%;
 }
 
 /* -------------| middle_inspired_deals |------------ */
@@ -486,6 +492,7 @@ margin-bottom: 50px;
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(3,1fr);
+    margin-bottom: 50px;
 }
 .bottom_giftIdeas_card{
     background: #d0d0d169;

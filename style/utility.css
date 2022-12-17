@@ -12,7 +12,7 @@
     padding: 0 10px;
 }
 
-button{
+button {
     transition-duration: 300ms;
     cursor: pointer;
 }
@@ -28,6 +28,28 @@ button{
     border: none;
     text-align: center;
 }
-.yl_btn:hover{
+
+.yl_btn:hover {
     background: #ffea4a;
+}
+
+/* !---------| Media Query |----------------------- */
+
+
+@media screen and (max-width: 992px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        width: 90%;
+    }
 }

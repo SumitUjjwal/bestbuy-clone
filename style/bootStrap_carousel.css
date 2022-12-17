@@ -1,0 +1,35 @@
+
+.card-deck {
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       gap: 0px;
+       width: 100%;
+       /* border: 1px solid blue; */
+       padding: 2%;
+}
+
+.card {
+       width: 80%;
+       margin: auto;
+}
+
+.card-button {
+       width: 100%;
+       color: #0133bc;
+       font-weight: 600;
+       background-color: white;
+       border-color: #0133bc;
+       border-radius: 4px;
+       padding: 5px;
+}
+
+.card-button:hover{
+       color: white;
+       background-color: #001E73;
+}
+
+.carousel-control {
+       opacity: 30%;
+       width: 3%;
+}
+

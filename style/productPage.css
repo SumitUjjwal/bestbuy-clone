@@ -1,0 +1,885 @@
+    * {
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .navCls {
+        overflow: hidden;
+
+        position: fixed;
+        top: 0;
+        width: 100%;
+        border: none;
+
+    }
+
+    #container {
+
+        width: 100%;
+        height: auto;
+        margin-top: 0.38rem;
+
+        overflow: hidden;
+        box-sizing: border-box;
+        border: none;
+
+    }
+
+
+    .banner {
+        border: none;
+        position: relative;
+    }
+
+
+
+    .belowBanner {
+
+
+        padding: 0px 10px 0px 10px;
+
+    }
+
+    .lapImg {
+        width: 100%;
+        height: 190px;
+    }
+
+    .closeToImg {
+        position: absolute;
+        top: 6%;
+        left: 60%;
+    }
+
+
+    .topDealBtn {
+        margin-bottom: 0px;
+        color: whitesmoke;
+        background-color: red;
+        padding: 5px 20px 5px 20px;
+        transform: skew(-20deg);
+        border: none;
+    }
+
+    .margBot {
+        color: white;
+        margin-top: 4px;
+        margin-bottom: 0px;
+        font-size: 50px;
+    }
+
+    .margTop {
+        color: white;
+        margin-top: 0px;
+        font-size: 40px;
+        margin-bottom: 4px;
+
+    }
+
+
+
+    .flexing {
+        display: flex;
+    }
+
+
+
+    .marg {
+        margin-top: 20px;
+    }
+
+    .shiftLeft {
+        margin-left: 10px;
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+
+    .hrStyle {
+        margin-top: 0px;
+    }
+
+
+
+    .topDealCat {
+        width: 100%;
+
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+    .topDealCat a{
+        padding: 16px; text-align: center;
+    }
+    .oneDiv {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .oneDiv img {
+        width: 100%;
+        height: 50%;
+
+    }
+
+
+
+    #imgStyle {
+        width: 70%;
+        /* margin: auto; */
+        margin-left: 21px;
+        margin-top: 0px;
+    }
+
+    .reduceWidth {
+        width: 70%;
+    }
+
+    .increaseWidth {
+        width: 100%
+    }
+
+    a {
+
+        text-decoration: none;
+        color: #4784d6;
+
+    }
+
+
+
+    .hMargBot {
+        margin-bottom: 10px;
+    }
+
+
+
+    .hrMargBot {
+        margin-bottom: 30px;
+
+        height: 0px;
+        color: lightgray;
+    }
+
+
+
+    .todayDeals {
+        width: 100%;
+        height: auto;
+        /* border: 1px solid green; */
+        margin: auto;
+        position: relative;
+    }
+
+    .up_sec {
+        margin-bottom: 3rem;
+    }
+
+    .todayDeals img {
+        width: 100%;
+        height: auto;
+    }
+
+    .topLeft {
+        position: absolute;
+        left: 52%;
+        top: 1%;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .topLeft span:nth-child(1) {
+        font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+        ;
+        font-size: 25px;
+        font-weight: 800;
+        line-height: 90px;
+        margin-bottom: 0px;
+    }
+
+    .topLeft span:nth-child(2) {
+        font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+        ;
+        font-size: 105px;
+        font-weight: 700;
+        line-height: 35px;
+        margin-top: 0px;
+        /* margin-left: -60px; */
+    }
+
+    #spn {
+        font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+        ;
+        font-size: 105px;
+        font-weight: 700;
+        line-height: 78px;
+        margin-top: 0px;
+        color: blue;
+    }
+
+    .supScript {
+        top: -0.65em;
+        font-size: 56px;
+    }
+
+    .todayDeals p:nth-child(3) {
+        position: absolute;
+        left: 52%;
+        top: 34%;
+    }
+
+    .todayDeals p:nth-child(4) {
+        position: absolute;
+        left: 52%;
+        top: 38%;
+    }
+
+    /* Common */
+
+    .tod_btn {
+        color: white;
+        background-color: blue;
+        padding: 10px 20px 10px 20px;
+        border: none;
+        border-radius: 6px;
+        position: absolute;
+        left: 52%;
+        top: 46%;
+        cursor: pointer;
+    }
+
+    /* todayDeal Lowersection */
+
+    .low_sec {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, auto);
+        gap: 20px;
+        margin: auto;
+    }
+
+    /* .low_sec div{
+border: 1px solid black;
+} */
+
+    .firstItem {
+        display: flex;
+        flex-direction: column;
+        line-height: 40px;
+    }
+
+    #fi_item_img {
+        width: 100%;
+        height: 300px;
+    }
+
+    #fi_item_logo {
+        width: 30%;
+        height: 24px;
+    }
+
+    .firstItem a {
+        padding: 0px;
+        text-align: left;
+        line-height: 20px;
+    }
+
+    .fi_item_price {
+        font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+        ;
+        color: #1d252c;
+        font-size: larger;
+        font-weight: bolder;
+        margin-top: 1rem;
+
+    }
+
+    #fi_item_btn {
+        background-color: rgb(252, 252, 14);
+        color: black;
+        border: none;
+        padding: 1px 30px 1px 20px;
+        border-radius: 6px;
+        margin-top: 1rem;
+        cursor: pointer;
+    }
+
+    .pad_left,
+    .fi_item_price {
+        line-height: 38px;
+    }
+
+    #cart_img {
+        width: 12px;
+        height: 12px;
+        margin-bottom: 0.5rem;
+    }
+
+    /* 9. Outlet Event */
+
+    .fiftyPercentDeals {
+        width: 100%;
+        height: auto;
+        /* border: 1px solid violet; */
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, auto);
+        gap: 20px;
+    }
+
+    .fif_padding {
+        padding-left: 26px;
+    }
+
+    /* .fiftyPercentDeals div{
+border: 1px solid black;
+} */
+
+    .fif_btn {
+        background-color: blue;
+        border: none;
+        /* border-radius: 6px; */
+        padding: 10px 25px 10px 25px;
+    }
+
+    .out_clr {
+        color: yellow;
+    }
+
+    .eve_clr {
+        color: white;
+    }
+
+    .saveCls {
+        font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+        ;
+        font-size: 32px;
+        font-weight: 800;
+        color: #bb0628;
+        /* font-size: larger; */
+        margin-top: 4px;
+        margin-bottom: 0px;
+    }
+
+    #disc {
+        font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+        ;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 62px;
+        font-weight: 900;
+
+    }
+
+    .onClr {
+        font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+        ;
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+    }
+
+    .fif_sec_col_link {
+        padding: 0px;
+    }
+
+    .fif_sec_col_link:hover {
+        text-decoration: underline;
+        color: rgb(85, 82, 82);
+    }
+
+    .third_col_img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .fif_btn {
+        color: white;
+        background-color: blue;
+        padding: 10px 30px 10px 30px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    /* 10. More of this div */
+
+    .moreofMonth {
+        width: 100%;
+        height: auto;
+        /* border: 1px solid red; */
+        margin: auto;
+        margin-top: 2rem;
+        display: flex;
+        box-sizing: border-box;
+        padding: 22px;
+        justify-content: center;
+        background-color: black;
+    }
+
+    .moreofMonth div {
+        /* border: 1px solid white; */
+        width: 20%;
+        height: auto;
+        /* margin-bottom: 6rem; */
+
+    }
+
+    .moreofMonth div:nth-child(1) {
+        flex-basis: 60%;
+    }
+
+    .more_first_para {
+        margin-top: 0px;
+        font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 28px;
+        color: #e0e6ef;
+        margin-bottom: 0px;
+
+    }
+
+    .more_first_para .more_dot_clr {
+        color: yellow;
+        border-radius: 50%;
+    }
+
+    .more_sec_para {
+        margin-top: 8px;
+        font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: 17.5px;
+        color: #e0e6ef;
+    }
+
+    .more_btn {
+        color: white;
+        background-color: black;
+        padding: 10px 30px 10px 30px;
+        border: 1px solid white;
+        border-radius: 4px;
+        cursor: pointer;
+
+    }
+
+    /* 11. save up to 400 dollars  */
+
+    .fourDollars {
+        width: 100%;
+        height: auto;
+        /* border: 1px solid blue; */
+        margin: auto;
+        margin-top: 2rem;
+        position: relative;
+    }
+
+    .fourDollars img {
+        width: 100%;
+    }
+
+    .fourDollars .four_text {
+        position: absolute;
+        top: 10%;
+        left: 18%;
+        display: flex;
+        flex-direction: column;
+        line-height: 40px;
+    }
+
+    .four_text span:nth-child(1) {
+        font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+        ;
+        font-size: 25px;
+        font-weight: 800;
+        line-height: 90px;
+        margin-bottom: 0px;
+        color: #1d252c;
+    }
+
+    .four_text span:nth-child(2) {
+        /* position: absolute; */
+        font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+        ;
+        font-size: 105px;
+        font-weight: 700;
+        line-height: 35px;
+        margin-top: 0px;
+        margin-left: -4rem;
+    }
+
+    #four_spn {
+        font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+        ;
+        font-size: 105px;
+        font-weight: 700;
+        line-height: 78px;
+        margin-top: 0px;
+        color: blue;
+    }
+
+    .four_thirdLine {
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    .four_btn {
+        color: white;
+        background-color: blue;
+        padding: 1px 20px 1px 20px;
+        border: none;
+        border-radius: 6px;
+        position: absolute;
+        left: 0%;
+        top: 100%;
+        cursor: pointer;
+        /* line-height: 40px; */
+
+    }
+
+    /* <!-- 12. save up to 400 dollars --> */
+
+    .iphone13Pro {
+        width: 100%;
+        height: auto;
+        /* border: 1px solid violet; */
+        margin: auto;
+        margin-top: 2rem;
+        position: relative;
+    }
+
+    .iphone13Pro img {
+        width: 100%;
+        /* position: relative; */
+    }
+
+    .iph_cls {
+        position: absolute;
+        top: 8%;
+        left: 38%;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        margin: auto;
+        flex-direction: column;
+        width: 350px;
+        height: 268px;
+        text-align: center;
+    }
+
+    .iph_cls img {
+        vertical-align: middle;
+    }
+
+    .iph_cls div:nth-child(1) {
+        width: 165px;
+        font-size: 13px;
+        font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+    }
+
+    .iph_cls div:nth-child(2) {
+        width: 350px;
+        margin-top: 20px;
+        /* padding-left: 4rem; */
+        font-size: 13px;
+        font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+
+    }
+
+    .iph_para_wid {
+        text-align: center;
+        width: 80%;
+        line-height: 20px;
+        margin-bottom: 0px;
+    }
+
+    .iph_para_sec_clr {
+        color: #b7b7b9;
+        margin-top: 2px;
+    }
+
+    .iph_btn {
+        position: absolute;
+        top: 66%;
+        left: 34%;
+        color: white;
+        background-color: blue;
+        padding: 10px 20px 10px 20px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    /*         <!--13. oven and dinasaur items  --> */
+
+    .randomItems {
+        width: 100%;
+        height: auto;
+        /* border: 1px solid green; */
+        margin: auto;
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, auto);
+        gap: 10px;
+    }
+
+    /* .randomItems div{
+border: 1px solid red;
+} */
+
+    .ran_fi_img img {
+        width: 100%;
+    }
+
+    .ran_sec_img img {
+        width: 100%;
+    }
+
+    .ran_sec_col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ran_para_colr {
+        color: rgb(124, 124, 124);
+    }
+
+    .ran_sec_col a {
+        padding: 0px;
+        text-align: start;
+    }
+
+    .ran_four_col a {
+        /* margin-top: 4rem; */
+        padding: 0px;
+        text-align: start;
+        line-height: 50px;
+    }
+
+    .ran_four_col p:nth-child(2) {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    .ran_btn {
+        color: white;
+        background-color: blue;
+        padding: 10px 30px 10px 30px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    /*         <!-- 14. bestBuy totaltech --> */
+
+    .totalTech {
+        width: 100%;
+        height: auto;
+        /* border: 1px solid red; */
+        margin: auto;
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+        gap: 26px;
+        /* box-sizing: border-box; */
+    }
+
+
+
+    .tot_fi_div {
+        background-color: #ebebeb;
+        display: flex;
+    }
+
+    .tot_fi_div div {
+        /* border: 1px solid red; */
+        width: 50%;
+    }
+
+    .tot_fi_col {
+        padding: 30px 0px 20px 10px;
+        flex-basis: 64%;
+        /* height: 300px; */
+    }
+
+    #tot_fi_img {
+        width: 140px;
+    }
+
+    .tot_fi_col_para {
+        font-size: 20px;
+        font-weight: bolder;
+    }
+
+    .tot_fi_col_para_third {
+        font-size: 14px;
+        color: rgb(95, 93, 93);
+    }
+
+    .tot_fi_col_btn {
+        color: white;
+        background-color: blue;
+        padding: 10px 34px 10px 34px;
+        border: none;
+        border-radius: 4px;
+        font-size: medium;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .tot_fi_sec_col {
+        position: relative;
+    }
+
+    #tot_fi_sec_col_img {
+        position: absolute;
+        bottom: 0%;
+        height: 300px;
+        width: 150px;
+    }
+
+    .tot_sec_div {
+        background: linear-gradient(180deg, rgba(0, 70, 190, 1) 0%, rgba(12, 7, 78, 1) 100%);
+    }
+
+    .tot_sec_div_col {
+        padding: 30px 0px 20px 10px;
+    }
+
+    .tot_sec_div_para_fi {
+        font-size: 30px;
+        font-weight: bolder;
+        color: white;
+    }
+
+    #tot_sec_div_para_sec {
+        font: 20px;
+        /* line-height: 2000px; */
+        color: white;
+    }
+
+    .tot_sec_div_col_btn {
+        color: black;
+        background-color: rgb(238, 238, 5);
+        padding: 10px 34px 10px 34px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: medium;
+        font-weight: bold;
+    }
+
+    /*         <!-- 15. 12 month financing --> */
+
+    .financing {
+        width: 100%;
+        height: 240px;
+        /* border: 1px solid blue; */
+        margin: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    .fin_fi_div img {
+        width: 100%;
+        height: 240px;
+    }
+
+    .fin_fi_text_left {
+        position: absolute;
+        top: 10%;
+        left: 20px;
+    }
+
+    .fin_fi_text_left p:nth-child(1) {
+        color: rgb(253, 253, 5);
+        font-size: 26px;
+        font-weight: bolder;
+        font-weight: 900;
+        font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+        margin-bottom: 0px;
+    }
+
+    .fin_fi_text_left p:nth-child(2) {
+        color: white;
+        font-size: 13px;
+        font-weight: bolder;
+        font-weight: 400;
+        font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+        margin-top: 4px;
+    }
+
+    .fin_fi_text_left button {
+        color: blue;
+        background-color: white;
+        padding: 10px 24px 10px 24px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bolder;
+    }
+
+    .fin_fi_text_right {
+        position: absolute;
+        top: 13%;
+        right: 9%;
+    }
+
+    .fin_fi_text_right p:nth-child(1) {
+        color: white;
+        font-size: 24px;
+        font-weight: bolder;
+        font-weight: 600;
+        font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+        margin-bottom: 0px;
+    }
+
+    .fin_fi_text_right p:nth-child(2) {
+        color: white;
+        font-size: 24px;
+        font-weight: bolder;
+        font-weight: 600;
+        font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+
+    .fin_fi_text_right p:nth-child(3) {
+        color: white;
+        font-size: 24px;
+        font-weight: bolder;
+        font-weight: 600;
+        font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+        margin-top: 0px;
+    }
+
+    .fin_fi_text_right button {
+        color: blue;
+        background-color: white;
+        padding: 10px 24px 10px 24px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bolder;
+    }
+
+
+
+    #itemSection {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        justify-content: space-around;
+        width: 100%;
+
+
+    }

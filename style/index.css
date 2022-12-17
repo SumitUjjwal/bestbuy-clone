@@ -13,7 +13,6 @@
     height: 200px;
     background-image: url('../resources/banners/top_banner_bg.png');
     background-size: contain;
-    /* z-index: 0; */
     background-repeat: no-repeat;
 }
 
@@ -128,8 +127,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 155px;
-    width: 155px;
+    /* height: 155px;
+    width: 155px; */
+    width: 100%;
+    height: 85%;
     margin-bottom: 10px;
     box-sizing: border-box;
 }
@@ -245,6 +246,7 @@
     background-size: contain;
     /* z-index: 0; */
     background-repeat: no-repeat;
+    box-sizing: border-box;
 }
 
 .middle_banner_outerContainer {
@@ -421,6 +423,7 @@
     font-size: 15px;
     font-weight: 900;
     line-height: 18px;
+    font-weight: 400;
 }
 
 .middle_inspired_deals>div>div:nth-child(5)>div>img {
@@ -431,10 +434,12 @@
 .bottom_carousel {
     width: 98%;
     margin: auto;
+    margin-bottom: 50px;
     box-sizing: border-box;
     border-radius: 2px;
     background-image: url(../resources/adds/carousel.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     padding: 20px;
     /* height: 400px; */
     display: flex;
@@ -479,7 +484,7 @@
     width: 100%;
     padding: 20px 0;
     /* border: 1px solid red; */
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .bottom_carousel_cards_track {
@@ -546,7 +551,8 @@
     align-items: center;
     /* justify-content: center; */
 }
-.bottom_carousel_prev_button>span{
+
+.bottom_carousel_prev_button>span {
     font-size: 50px;
     color: rgb(179, 179, 179);
     cursor: pointer;
@@ -560,7 +566,8 @@
     align-items: center;
     padding-left: 10px;
 }
-.bottom_carousel_next_button>span{
+
+.bottom_carousel_next_button>span {
     font-size: 50px;
     color: #0046be;
     cursor: pointer;
@@ -577,6 +584,7 @@
     font-weight: 800;
     line-height: 46px;
     color: #ffffff;
+
 }
 
 #middle_banner_innerContainer_text>h2>span {
@@ -633,8 +641,9 @@
 .featured_offers_container {
     display: flex;
     justify-content: space-between;
-    padding: 0 15px;
-    margin-top: 15px;
+    margin: 15px 15px 0 15px;
+    /* margin-top: 15px; */
+    padding-top: 15px;
 }
 
 .featured_offers_card {
@@ -842,10 +851,12 @@
 
 .featured_led_container {
     display: flex;
-    box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 .featured_led_container>div {
+    min-width: 13%;
+    width: 13%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -868,4 +879,358 @@
 .featured_led_container>div>span:hover {
     color: #001e73;
     text-decoration: underline;
+}
+
+/* !---------| Media Query |----------------------- */
+
+@media screen and (max-width: 992px) {
+    body {
+        background: green;
+    }
+
+    /* top section */
+    .topSection_cards_innerContainer {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .topSection_heading>div:nth-child(1)>h2 {
+        font-size: 60px;
+    }
+
+    .topSection_heading>div:nth-child(2)>h3 {
+        font-size: 18px;
+    }
+
+    .topSection_heading>div:nth-child(2)>button {
+        width: 35%;
+    }
+
+    .topSection_card_textBox {
+        font-size: 11px;
+    }
+
+    /* Middle section */
+    .middleSection_add_innerContainer>div:nth-child(1)>img {
+        width: 25%;
+    }
+
+    .middleSection_add_innerContainer>div:nth-child(2)>div:nth-child(1)>img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .middleSection_add_innerContainer>div:nth-child(2)>div:nth-child(1)>img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .middleSection_add_innerContainer>div:nth-child(2)>div:nth-child(2)>button {
+        width: 60%;
+    }
+
+    /* banner */
+    .middle_banner_innerContainer>div:nth-child(2)>button {
+        width: 100%;
+    }
+
+    /* featured offers */
+    .featured_offers_container>div:nth-child(2) {
+        padding: 0 20px;
+    }
+
+    /* banner star image */
+    .middle_banner_stars {
+        background-size: cover;
+        height: 60px;
+    }
+
+    #middle_banner_innerContainer_text>h2 {
+        font-size: 28px;
+    }
+
+    /* gift ideas */
+    .bottom_giftIdeas_card>h2 {
+        font-size: 15px;
+    }
+
+    .giftIdea_cards_container>div>span {
+        font-size: 13px;
+    }
+
+    /* bottom banner */
+    .bottom_banner_ad_container>div>h1 {
+        font-size: 30px;
+    }
+
+    .bottom_banner_ad_container>div>h3 {
+        font-size: 15px;
+    }
+
+    .bottom_banner_ad_container>div>p {
+        font-size: 13px;
+    }
+
+    .bottom_banner_ad_container>div:nth-child(4)>button {
+        width: 100%;
+    }
+
+    /* carousel */
+    .bottom_carousel_card {
+        width: 25%;
+        min-width: 25%
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background: yellow;
+    }
+
+    /* top section */
+    .topSection_cards_innerContainer {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .topSection_heading>div:nth-child(1)>h2 {
+        font-size: 50px;
+    }
+
+    .topSection_heading>div:nth-child(2)>h3 {
+        font-size: 15px;
+    }
+
+    .topSection_heading>div:nth-child(2)>button {
+        width: 35%;
+        font-size: 11px;
+        padding: 5px;
+    }
+
+    /* Middle section */
+    .middleSection_add_innerContainer>div:nth-child(1)>img {
+        width: 25%;
+    }
+
+    .middleSection_add_innerContainer>div:nth-child(2)>div:nth-child(1)>img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .middleSection_add_innerContainer>div:nth-child(2)>div:nth-child(1)>img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .middleSection_add_innerContainer>div:nth-child(2)>div:nth-child(2)>button {
+        width: 100%;
+    }
+
+    /*rectly card row */
+    .middle_inspired_deals>div {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* featured offers */
+    .featured_offers_container>div:nth-child(2) {
+        padding: 0 15px;
+    }
+
+    /* banner star image */
+    .middle_banner_stars {
+        background-size: cover;
+        height: 60px;
+    }
+
+    #middle_banner_innerContainer_text>h2 {
+        font-size: 25px;
+    }
+
+    /* gift ideas */
+    .bottom_giftIdeas {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .bottom_giftIdeas_card>h2 {
+        font-size: 20px;
+    }
+
+    .giftIdea_cards_container>div>span {
+        font-size: 20px;
+    }
+
+    /* bottom banner */
+    .bottom_banner_ad_container>div>h1 {
+        font-size: 25px;
+    }
+
+    .bottom_banner_ad_container>div>h3 {
+        font-size: 13px;
+    }
+
+    .bottom_banner_ad_container>div>p {
+        font-size: 10px;
+    }
+
+    .bottom_banner_ad_container>div:nth-child(4)>button {
+        width: 100%;
+    }
+
+    /* featured led */
+    .featured_led_container>div {
+        min-width: 40%;
+    }
+
+    /* carousel */
+    .bottom_carousel_card {
+        width: 40%;
+        min-width: 40%
+    }
+
+    .bottom_carousel_left_section>h3 {
+        font-size: 15px;
+    }
+
+    .bottom_carousel_left_section>a {
+        font-size: 13px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        background: red;
+    }
+
+    /* top section */
+    .topSection_cards_innerContainer {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding-bottom: 20px;
+    }
+
+    .topSection_heading {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topSection_heading>div:nth-child(1) {
+        width: 80%;
+        align-items: center;
+    }
+
+    .topSection_heading>div:nth-child(1)>h2 {
+        font-size: 50px;
+    }
+
+    .topSection_heading>div:nth-child(1)>h3 {
+        font-size: 35px;
+    }
+
+    .topSection_heading>div:nth-child(2) {
+        width: 80%;
+        align-items: center;
+    }
+
+    .topSection_heading>div:nth-child(2)>h3 {
+        font-size: 15px;
+    }
+
+    .topSection_heading>div:nth-child(2)>button {
+        width: 25%;
+    }
+
+    /* Middle section */
+    .middleSection_adds {
+        flex-direction: column;
+    }
+
+    .middleSection_add_outerContainer {
+        width: 98%;
+        margin: auto;
+        margin-bottom: 30px;
+        /* border: 2px solid blue; */
+    }
+
+    .middleSection_add_innerContainer>div:nth-child(1)>img {
+        width: 25%;
+    }
+
+    .middleSection_add_innerContainer>div:nth-child(2)>div:nth-child(1)>img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .middleSection_add_innerContainer>div:nth-child(2)>div:nth-child(1)>img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .middleSection_add_innerContainer>div:nth-child(2)>div:nth-child(2)>button {
+        width: 50%;
+    }
+
+    /*rectly card row */
+    .middle_inspired_deals>div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* featured offers */
+    .featured_offers>h2 {
+        font-size: 20px;
+    }
+
+    .featured_offers_container>div:nth-child(2) {
+        padding: 0 10px;
+    }
+
+    /* banner star image */
+    .middle_banner_stars {
+        background-size: cover;
+        height: 60px;
+    }
+
+    #middle_banner_innerContainer_text>h2 {
+        font-size: 20px;
+    }
+
+    /* gift ideas  */
+    .giftIdea_cards_container>div>span {
+        font-size: 15px;
+    }
+
+    /* bottom banner */
+    .bottom_banner_ad_container>div>h1 {
+        font-size: 20px;
+    }
+
+    .bottom_banner_ad_container>div>h3 {
+        font-size: 10px;
+    }
+
+    .bottom_banner_ad_container>div>p {
+        font-size: 8px;
+    }
+
+    .bottom_banner_ad_container>div:nth-child(4)>button {
+        width: 100%;
+    }
+
+    /* featured led */
+    .featured_led_container>div {
+        min-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    /* carousel */
+    .bottom_carousel_card {
+        width: 40%;
+        min-width: 40%
+    }
+
+    .bottom_carousel_left_section>h3 {
+        font-size: 13px;
+    }
+
+    .bottom_carousel_left_section>a {
+        font-size: 10px;
+    }
 }

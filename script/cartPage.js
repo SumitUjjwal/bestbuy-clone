@@ -1,28 +1,24 @@
-let url = "https://6398c0f229930e2bb3c11afd.mockapi.io/laptops/";
+let url = "https://6398c0f229930e2bb3c11afd.mockapi.io/mobiles/";
 let item = document.getElementById("items");
 let price;
 let price_summary = document.getElementById("price_summary");
+let carousel_card = document.querySelector(".card");
 
 
 async function CartItems(id) {
        let request = await fetch(`${url}${id}`);
        let data = await request.json();
-       // price_con(data.price)
        price = data.price.slice(1)
        show_data(data, price)
-       // console.log(data)
-       // console.log(price)
        show_price_summary(price)
 }
 
-CartItems(2)
-
-// async function price_con(value) {
-//        price = value.slice(1)
-
-// }
+CartItems(3)
 
 async function show_data(data, new_price) {
+       sessionStorage.setItem("img_src", data.img_src)
+       sessionStorage.setItem("title", data.title)
+       sessionStorage.setItem("price", new_price)
        item.innerHTML =
               `
               <div id="item_detail">
@@ -54,29 +50,31 @@ async function show_data(data, new_price) {
        `
 
        let item_qty = document.getElementById("item_action_quantity");
-       console.log(item_qty)
+       sessionStorage.setItem("qty", item_qty.value)
        item_qty.addEventListener("change", function () {
               let qty = item_qty.value;
               let new_price = 0;
               new_price = price * qty;
-              // show_data(data, new_price);
               update_data(new_price)
               show_price_summary(new_price);
+              sessionStorage.setItem("qty", qty)
+              sessionStorage.setItem("price", new_price)
        })
-       
-       function update_data(new_price){
-              document.getElementById('item_price').innerText = new_price;
+
+       function update_data(new_price) {
+              document.getElementById('item_price').innerText = `$${new_price}`;
        }
+
+       
 }
 
-// async function qty_price(qty,price) {
-//        console.log(qty,price)
-// }
 
 async function show_price_summary(price_value) {
-       let discount = ((price_value / 100)*3).toFixed(2);
-       let sales_tax = (((price_value-discount)/100)*18).toFixed(2);
+       let discount = ((price_value / 100) * 23).toFixed(2);
+       let sales_tax = (((price_value - discount) / 100) * 18).toFixed(2);
        let total_value = (+price_value - +discount + +sales_tax).toFixed(2);
+       sessionStorage.setItem("total_price", total_value);
+       sessionStorage.setItem("tax", sales_tax);
        price_summary.innerHTML =
               `
        <div id="price_summary_line1" class="summary_line">
@@ -101,3 +99,30 @@ async function show_price_summary(price_value) {
                             </div>
        `
 }
+
+
+// async function carousel_card_data() {
+//        let request = await fetch(url);
+//        let data = await request.json();
+//        console.log(data)
+//        carousel_card.innerHTML = "";
+
+//        let show_card_data = data.map((element) => {
+//               console.log(element.price)
+//               return
+//               `
+//                      <img class="card-img-top"
+//                             src="${element.img_src}"
+//                             alt="Card image cap" width="100%">
+//                      <div class="card-body">
+//                             <h5 class="card-title">${element.title}</h5>
+//                             <p class="card-text">${element.price}</p>
+//                             <button class="card-button">Add to Cart</button>
+//                      </div>
+//               `
+//        });
+//        carousel_card.innerHTML = show_card_data[0];
+//        console.log(show_card_data)
+// }
+
+// carousel_card_data();

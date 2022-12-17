@@ -1,0 +1,37 @@
+* {
+       margin: 0;
+       padding: 0;
+       font-family: "Roboto", sans-serif;
+}
+
+#checkout_page_logo {
+       display: flex;
+       align-items: center;
+}
+
+#checkout_page_logo>span {
+       font-size: 30px;
+       color: white;
+}
+
+#checkout_nav_bar {
+       background-color: #0046be;
+       margin: auto;
+       margin-bottom: 50px;
+       padding: 5px 30px;
+       position: sticky;
+       top: 0px;
+}
+
+#inner_checkout_nav_bar{
+       width: 65%;
+       margin: auto;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+}
+
+#inner_checkout_nav_bar>a{
+       color: #96aed6;
+       text-decoration: none;
+}

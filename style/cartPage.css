@@ -1,8 +1,9 @@
+
 /* main container */
 #cart_main_container {
        display: flex;
        width: 90%;
-       margin: auto;
+       margin: 20px auto;
        justify-content: space-between;
 }
 
@@ -10,33 +11,80 @@
 #cart_main_container>:nth-child(1) {
        width: 70%;
        /* background-color: #F0F2F4; */
+       display: flex;
+       flex-direction: column;
+       gap: 30px;
 }
 
 #cart_main_container>:nth-child(1)>:nth-child(2) {
-       box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
        display: flex;
        justify-content: space-evenly;
+       align-items: center;
 }
 
+#cart_main_container>:nth-child(1)>:nth-child(2) span{
+       font-size: 13px;
+}
+#cart_main_container>:nth-child(1)>:nth-child(2)>:nth-child(3){
+       border-color: #0133bc;
+       border-radius: 4px;
+       background-color: white;
+       width: 20%;
+       padding: 8px;
+       color: #0133bc;
+       font-weight: 500;
+}
+
+#cart_main_container>:nth-child(1)>:nth-child(2)>:nth-child(3):hover{
+       background-color: #001E73;
+       color: white;
+}
 #cart_main_container>:nth-child(1)>:nth-child(3) {
-       box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 #cart_main_container>:nth-child(1)>:nth-child(3)>:nth-child(1) {
        display: flex;
        justify-content: space-evenly;
        border-bottom: 1px solid grey;
+       padding-bottom: 15px;
+       align-items: center;
 }
 
 #cart_main_container>:nth-child(1)>:nth-child(3)>:nth-child(1)>:nth-child(1) {
        display: flex;
        justify-content: space-evenly;
+       align-items: center;
+}
+
+#cart_main_container>:nth-child(1)>:nth-child(3)>:nth-child(1)>:nth-child(1) img{
+       width: 20%;
+}
+
+#cart_main_container>:nth-child(1)>:nth-child(3)>:nth-child(1)>:nth-child(2){
+       width: 25%;
 }
 
 #cart_main_container>:nth-child(1)>:nth-child(3)>:nth-child(2) {
-       width: 80%;
+       /* width: 80%; */
+       display: flex;
+       flex-direction: column;
+       align-content: flex-end;
 }
 
+#item_action_quantity{
+       width: 70%;
+       padding: 5px;
+       border-radius: 4px;
+}
+
+#item_action_remove{
+       border: none;
+       color: #0133bc;
+       background-color: transparent;
+
+}
 .add_ons_included_free {
        display: flex;
        justify-content: right;
@@ -49,18 +97,102 @@
 
 #cart_main_container>:nth-child(1)>:nth-child(3)>:nth-child(2)>:nth-child(1) {
        border-bottom: 1px solid grey;
+       padding-bottom: 15px;
+}
+
+#cart_main_container>:nth-child(1)>:nth-child(3)>:nth-child(2)>:nth-child(1) button{
+       border: none;
+       background-color: transparent;
+       color: #0133bc;
 }
 
 #cart_main_container>:nth-child(1)>:nth-child(3)>:nth-child(2)>:nth-child(2) {
        border-bottom: 1px solid grey;
+       padding-bottom: 15px;
 }
 
 #cart_main_container>:nth-child(1)>:nth-child(3)>:nth-child(2)>:nth-child(2)>:nth-child(2) {
        display: flex;
-       justify-content: space-evenly;
+       justify-content: space-between;
+       align-items: center;
+}
+
+#cart_main_container>:nth-child(1)>:nth-child(3)>:nth-child(2)>:nth-child(2) button{
+       background-color: white;
+       border-color: #0133bc;
+       color: #0133bc;
+       border-radius: 4px;
+       width: 100%;
+       padding: 5px;
+       font-weight: 500;
+}
+
+#cart_main_container>:nth-child(1)>:nth-child(3)>:nth-child(2)>:nth-child(2) button :hover{
+       background-color: #0133bc;
+       color: white;
+}
+
+#cart_main_container>:nth-child(1)>:nth-child(3)>:nth-child(2)>:nth-child(2)>:nth-child(2) img {
+       width: 15%;
+}
+
+.your_cart_container_box{
+       padding: 20px;
 }
 
 /* right container */
+
 #cart_main_container>:nth-child(2) {
        width: 25%;
+}
+
+
+#cart_main_container>:nth-child(2)>:nth-child(1) {
+       text-align: center;
+       border-bottom: 1px solid grey;
+       padding: 5px 0px;
+}
+
+.summary_line {
+       display: flex;
+       justify-content: space-between;
+       padding: 5px 7px;
+}
+
+#price_summary_line4{
+       border-bottom: 1px solid grey;
+}
+
+#total_price{
+       border-bottom: 1px solid grey;
+}
+
+#checkout_btn{
+       display: flex;
+       flex-direction: column;
+       gap: 10px;
+       margin: 2%;
+}
+
+#paypal_checkout{
+       background-color: black;
+       color: white;
+}
+
+#finance_banner{
+       display: flex;
+       justify-content: space-between;
+       margin: 2%;
+}
+
+#finance_banner>:nth-child(1){
+       width: 25%;
+}
+
+#finance_banner>:nth-child(2) {
+       width: 65%;
+}
+
+#finance_banner img{
+       width: 100%;
 }

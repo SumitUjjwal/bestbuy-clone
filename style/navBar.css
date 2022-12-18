@@ -1,14 +1,15 @@
 
+header{
+       margin-bottom: 1px;
+}
 /* top container */
 .top_nav_container {
        width: 100%;
-       /* border: 2px solid black; */
        background-color: #0046BE;
        color: white;
-       position: sticky;
+       position: fixed;
        top: 0px;
        z-index: 2;
-
 }
 
 .top_nav {
@@ -165,6 +166,7 @@
 /* bottom container */
 
 .bottom_nav_container {
+       margin-top: 66px;
        background-color: #0046BE;
        color: white;
        border-top: 1px solid #b4d0ff;

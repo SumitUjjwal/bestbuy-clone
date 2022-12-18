@@ -5,12 +5,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In to Best Buy</title>
+    <title>Sign in to Digital Basket</title>
     <link rel="stylesheet" href="../style/utility.css">
-    <link rel="stylesheet" href="../style/login.css">
+    <link rel="stylesheet" href="../style/auth.css">
 </head>
-<body>
 
+<body>
+    <section class="authNavigation">
+        <div class="authNavigation_container">
+            <img src="../resources/Digital_basket_white.png" alt="Digital_basket">
+            <p>Return to previous page</p>
+        </div>
+    </section>
+    <section class="authForm">
+        <h1>Sign in to Digital Basket</h1>
+        <form action="">
+            <input type="email" id="email" placeholder="Email Address">
+            <input type="password" id="pass" placeholder="Password">
+            <input type="submit" value="Create an Account" id="submitBtn">
+        </form>
+        <div>
+            <h1></h1>
+            <span>or</span>
+            <h1></h1>
+        </div>
+        <div class="iconButton print">
+            <img src="../resources/icons8-fingerprint-50.png" alt="">
+            Sign Up with Passkey
+        </div>
+        <div class="iconButton apple">
+            <img src="../resources/icons8-apple-logo-24.png" alt="">
+            Sign Up with Apple
+        </div>
+        <div class="iconButton google">
+            <img src="../resources/icons8-google-48.png" alt="">
+            Sign Up with Google
+        </div>
+        <p>By continuing you agree to our <span>Terms and Conditions</span>, our <span>Privacy Policy</span>, and the
+            <span>My Best Buy® Program Terms.</span>
+        </p>
+        <div class="bottom_navigation_message">
+            <h2>Don't have an account? <a href="../html/signup.html">Create an Account</a></h2>
+        </div>
+    </section>
+    <section class="authFooter">
+        <div class="authFooterContainer">
+            <div>
+                <span>Terms and Conditions</span>
+                <span>Privacy</span>
+                <span>Interest-Based Ads</span>
+            </div>
+            <div>
+                <span>Mobile Site</span>
+            </div>
+            <p>Prices and offers are subject to change. © 2022 Digital Basket. All rights reserved. Digital Basket, the Digital Basket logo, the Tag Design, MY Digital Basket, and BESTBUY.COM are trademarks of Digital Basket and its affiliated companies.</p>
+        </div>
+    </section>
 </body>
 <script src="../script/auth.js"></script>
+
 </html>

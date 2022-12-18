@@ -63,7 +63,7 @@
 .top_nav_logo {
        /* border: 1px solid red; */
        width: 8%;
-       height: 100%;
+       /* height: 100%; */
        display: flex;
        align-items: center;
 }
@@ -246,3 +246,36 @@
        background-color: #0046BE;
        color: white;
 }
+
+/* -- media query -- */
+
+@media screen and (max-width: 940px){
+     body{
+       background: #000;
+     }
+     .bottom_nav_container{
+       display: none;
+     }
+} 
+@media screen and (max-width: 720px){
+     body{
+       background: red;
+     }
+     .top_nav_logo img{
+       width: 60px
+     }
+} 
+@media screen and (max-width: 520px){
+     body{
+       background: green;
+     }
+     .top_nav_logo img{
+       width: 60px
+     }
+     .top_nav>div:nth-child(1){
+       width: 100%;
+     }
+     .top_nav>div:nth-child(2){
+       display: none;
+     }
+} 

@@ -5,12 +5,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Basket: Create Accoutn</title>
+    <title>Digital Basket: Create an Account</title>
     <link rel="stylesheet" href="../style/utility.css">
-    <link rel="stylesheet" href="../style/login.css">
+    <link rel="stylesheet" href="../style/auth.css">
 </head>
-<body>
 
+<body>
+    <section class="authNavigation">
+        <a class="authNavigation_container" href="../index.html">
+            <img src="../resources/Digital_basket_white.png" alt="Digital_basket">
+            <p>Return to previous page</p>
+        </a>
+    </section>
+    <section class="authForm">
+        <h1>Create an Account</h1>
+        <h5>Shopping for your business? <span>Create a business account.</span></h5>
+        <form action="">
+            <input type="text" id="fname" placeholder="First Name" required>
+            <input type="text" id="lname" placeholder="Last Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="password" id="pass" placeholder="Password" required>
+            <input type="password" id="cpass" placeholder="Confirm Password" required>
+            <input type="text" id="phone" placeholder="Mobile Number" required>
+            <div>
+                <input type="checkbox" id="checkbox" name="vehicle1" value="check">
+                <label for="vehicle1">Use for Account Recovery.</label><br>
+            </div>
+            <input type="submit" value="Create an Account" id="submitBtn">
+        </form>
+        <div>
+            <h1></h1>
+            <span>or</span>
+            <h1></h1>
+        </div>
+        <div class="iconButton google">
+            <img src="../resources/icons8-google-48.png" alt="">
+            Sign Up with Google
+        </div>
+        <p>By continuing you agree to our <span>Terms and Conditions</span>, our <span>Privacy Policy</span>, and the
+            <span>My Digital Basket® Program Terms.</span>
+        </p>
+        <div class="bottom_navigation_message">
+            <h2>Already have an account? <a href="../html/login.html">Sign in</a></h2>
+        </div>
+    </section>
+    <section class="authFooter">
+        <div class="authFooterContainer">
+            <div>
+                <span>Terms and Conditions</span>
+                <span>Privacy</span>
+                <span>Interest-Based Ads</span>
+            </div>
+            <div>
+                <span>Mobile Site</span>
+            </div>
+            <p>Prices and offers are subject to change. © 2022 Digital Basket. All rights reserved. Digital Basket, the Digital Basket logo, the Tag Design, MY Digital Basket, and BESTBUY.COM are trademarks of Digital Basket and its affiliated companies.</p>
+        </div>
+    </section>
 </body>
-<script src="../script/auth.js"></script>
+<script src="../script/signup.js"></script>
+
 </html>

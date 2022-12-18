@@ -3,6 +3,7 @@
 .topSection_outerContainer {
     background: linear-gradient(135deg, #00246d -69%, #0046be 11%, #0a6dfc 56%, #0046be 89%, #00246d 200%);
     z-index: -1;
+    /* margin-top: 50px; */
 }
 
 .topSection_banner {

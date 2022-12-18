@@ -1,216 +1,278 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-footer{
-    background-color: rgb(240,242,244);
+footer {
+    background-color: rgb(240, 242, 244);
     width: 100%;
 }
 
 
-.sec_1{
+.sec_1 {
     display: grid;
     gap: 30px;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5, 1fr);
     text-align: center;
 }
-.sec_1>div{
+
+.sec_1>div {
     padding: 60px;
 }
-.sec_1>div:hover{
+
+.sec_1>div:hover {
     cursor: pointer;
 }
 
-.font-60{
-    font-size: 60px;
+.font-60 {
+    font-size: 40px;
     padding-bottom: 20px;
     color: gray;
 }
 
-.sec_1>div>a{
+.sec_1>div>a {
     text-decoration: none;
     margin-top: 10px;
-    font-family: 'Poppins' , sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 14px;
-    color: rgb(9,90,201);
+    font-size: 13px;
+    color: rgb(9, 90, 201);
+    display: block;
+    width: 100%;
 }
-.sec_1>div>a:hover{
+
+
+.sec_1>div>a:hover {
     text-decoration: underline;
 }
-.hl{
-    width: 95%;
-    background-color: rgb(152, 150, 150);
-    height: 1px;
+
+.hl {
+    width: 100%;
+    background-color: rgb(184, 184, 184);
+    height: 0.5px;
     margin: auto;
 }
 
-.sec_2{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-#sec_2-1{
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: repeat(3 , 1fr);
-    grid-template-rows: repeat(2 , 1fr);
-}
-
-#sec_2-1>div>h3{
-    font-family: 'Poppins' , sans-serif;
-}
-#sec_2-1>div>p{
-    color: rgb(9,90,201);
-    font-family: 'Poppins' , sans-serif;
-    padding-top: 20px;
-}
-footer>div:nth-child(4){
+.sec_2 {
+    width: 95%;
+    margin: auto;
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
-    padding: 20px;
+    /* flex-wrap: wrap; */
 }
-footer>div:nth-child(4)>div{
-    display: flex;
-    justify-content: space-around;
+
+#sec_2-1 {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
-footer>div:nth-child(4)>p>span{
-    color: rgb(9,90,201);
-    font-family: 'Poppins' ,sans-serif;
+
+#sec_2-1>div>h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    /* font-weight: 500; */
 }
-footer>div:nth-child(4)>div>p{
-    color: rgb(9,90,201);
-    font-family: 'Poppins' ,sans-serif;
-    margin-right: 40px;
+
+#sec_2-1>div>p {
+    color: rgb(9, 90, 201);
+    font-family: 'Poppins', sans-serif;
+    padding-top: 20px;
+    font-size: 13px;
 }
 
 
-#footer_form{
+#footer_form {
     background-color: white;
     width: 30%;
-    padding: 10px 20px 10px 30px;
+    padding: 10px 20px 10px 20px;
     margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 5px;
+    border-radius: 4px;
 }
 
-#footer_form>p:first-child{
-    color: rgb(9,90,201);
-    font-family: 'Poppins' , sans-serif;
-    font-weight: 500;
+#footer_form>h2{
+    color: #0046be;
+    font-weight: 400;
+    font-size: 13px;
     padding-bottom: 15px;
 }
 
-#footer_form>h3{
-    font-family: 'Poppins',sans-serif;
+#footer_form>h3 {
+    color: #040c13;
+    font-size: 17px;
     font-weight: 500;
+    line-height: 22px;
     padding-bottom: 15px;
     padding-top: 15px;
 }
-#footer_form>input:nth-child(4){
-    padding: 10px 40px 10px 20px;
-    border-radius: 5px;
-    border: 1px solid gray;
-    margin-left: 10px;
+
+#footer_form>div:nth-child(4){
+    display: flex;
+    justify-content: space-between;
 }
-#footer_form>input:nth-child(5){
-    margin-left: 15px;
-    padding: 10px 30px 10px 30px;
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(9,90,201);
+
+#footer_form>div:nth-child(4)>input:nth-child(1){
+    width: 62%;
+    padding: 6px 8px;
+    border-radius: 4px;
+    border: 0.2px solid rgb(138, 138, 138);
+}
+#footer_form>div:nth-child(4)>input:nth-child(2){
+    width: 32%;
+    padding: 6px 8px;
+    border-radius: 4px;
+    border: 0.2px solid rgb(138, 138, 138);
+    background: #0046be;
     color: white;
+    font-size: 15px;
 }
-.fa-mobile-button{
-    font-size: 60px;
-    color: rgb(9,90,201);
+
+#footer_form>div:nth-child(6){
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
 }
-#footer_form>div:nth-child(7){
-    padding: 20px;
+
+#footer_form>div:nth-child(6)>i{
+    font-size: 40px;
+    color: #0046be;
+    margin-right: 10px;
 }
-#footer_form>div:nth-child(7)>p{
-    font-family: 'Poppins' , sans-serif;
+
+#footer_form>div:nth-child(6)>div>span:nth-child(1){
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+
 }
-#footer_form>div:nth-child(7)>span{
+#footer_form>div:nth-child(6)>div>span:nth-child(2){
+color: #0046be;
+font-size: 13px;
+font-weight: 500;
+}
+#footer_form>div:nth-child(8){
+display: flex;
+justify-content: space-between;
+}
+
+#footer_form>div:nth-child(7)>span {
     font-size: 30px;
-    font-family: 'Poppins' ,sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
 
-.fa-brands{
-    font-size: 35px;
-    margin: 20px 5px 20px 40px;
-    color: rgb(9,90,201);
-}
-#footer_form>p:last-child{
-    padding-left: 10px;
-    color: rgb(9,90,201);
-    font-family: 'Poppins' ,sans-serif;
+.fa-brands {
+    font-size: 30px;
+    margin: 20px 0;
+    color: rgb(9, 90, 201);
 }
 
-#sec_3>div:first-child{
-    display: flex;
-    color: rgb(9,90,201);
-    justify-content: space-around;
-    font-size: 13px;
-    width: 90%;
-    margin-top: 30px;
-    font-family: 'Poppins' , sans-serif;
-}
-#sec_3>div:last-child{
-    color: rgb(115, 115, 115);
-    width: 90%;
-    font-size: 15px;
+#footer_form>p:last-child {
     margin-top: 20px;
-    font-family: 'Poppins' ,sans-serif;
-    margin-left: 20px;
+    color: rgb(9, 90, 201);
+    font-size: 13px;
+    font-weight: 400;
+    padding-bottom: 40px;
 }
 
-@media all and (min-width: 1324px) and (max-width: 1524px){
-    #footer_form{
+.sec_2+div{
+    /* background: #000; */
+    display: flex;
+    width: 95%;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.sec_2+div>p{
+    font-size: 13px;
+}
+.sec_2+div>p>span{
+    color: #0046be;
+    padding-left: 10px;
+}
+.sec_2+div>div{
+    color: #0046be;
+    font-size: 13px;
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#sec_3>div:first-child {
+    width: 95%;
+    margin: auto;
+    color: rgb(9, 90, 201);
+    font-size: 13px;
+    display: flex;
+    margin-top: 30px;
+    font-family: 'Poppins', sans-serif;
+    /* background: #000; */
+}
+#sec_3>div:first-child>p{
+    margin-right: 30px;
+}
+
+#sec_3>div:last-child {
+    color: rgb(31, 30, 30);
+    width: 95%;
+    margin: auto;
+    font-size: 13px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+   
+}
+
+/* @media all and (min-width: 1324px) and (max-width: 1524px) {
+    #footer_form {
         width: 35%;
     }
 }
+
 @media all and (min-width: 768px) and (max-width: 1324px) {
-    .sec_1{
+    .sec_1 {
         grid-template-columns: repeat(3, 1fr);
     }
-    #footer_form{
+
+    #footer_form {
         width: 50%;
     }
-    #sec_2{
+
+    #sec_2 {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(2,1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
-    #sec_2-1{
+
+    #sec_2-1 {
         padding: 10px;
         gap: 20px;
-        grid-template-columns: repeat(2 , 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media all and (min-width: 320px) and (max-width: 867px) {
-    .sec_1{
-        grid-template-columns: repeat(2 ,1fr);
+    .sec_1 {
+        grid-template-columns: repeat(2, 1fr);
     }
-    #footer_form{
-        width:80%;
+
+    #footer_form {
+        width: 80%;
     }
-    #sec_2-1{
+
+    #sec_2-1 {
         padding: 20px;
         gap: 20px;
     }
-    #sec_3>div:first-child{
+
+    #sec_3>div:first-child {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 10px;
         padding: 20px;
     }
-    #footer_form>input{
+
+    #footer_form>input {
         margin-top: 15px;
     }
-}
+} */

@@ -1,0 +1,124 @@
+#cont1 {
+       display: flex;
+       background-color: #1976D2;
+       height: 100px;
+}
+
+#symbolbtn {
+       width: 90px;
+       height: 70px;
+}
+
+#symbol {
+       width: 100%;
+       height: 100%;
+       margin-top: 10%;
+}
+
+body {
+       background-color: #E1F5FE;
+}
+
+#main {
+       display: flex;
+
+}
+
+#one {
+       width: 60%;
+       margin: 2%;
+
+}
+
+#two {
+       width: 30%;
+       margin: 1%;
+
+}
+
+.class1 {
+       margin-top: 20%;
+       width: 70%;
+       height: 300px;
+}
+
+#return {
+       width: 100%;
+       height: 50px;
+       background-color: darkgrey;
+       margin-top: 20px;
+       padding: 2px 0px 10px 0px;
+}
+
+#ram {
+       position: relative;
+       display: inline-block;
+       width: 100%;
+       height: 50px;
+       font-size: 15px;
+}
+
+#linear {
+       display: flex;
+       align-items: center;
+       margin: auto;
+}
+
+#opt {
+       width: 100%;
+       height: 70px;
+       border: 6px black;
+       background-color: cornflowerblue;
+}
+
+#box {
+       width: 100%;
+       height: 30px;
+       padding: 10px 0px 0px 10px;
+       background-color: yellow;
+       border-radius: 4px;
+       color: black;
+       text-align: center;
+       font-size: 20px;
+       font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#compare {
+       display: grid;
+       grid-template-columns: auto auto;
+
+}
+
+div.class2 {
+       text-align: left;
+}
+
+div.class3 {
+       text-align: right;
+}
+
+#experts {
+       width: 100%;
+       height: 130px;
+       background-color: lightblue;
+       text-align: left;
+}
+
+image {
+       background-color: blue;
+}
+
+#required {
+       width: 100%;
+       height: 200px;
+       display: grid;
+       gap: 12%;
+       grid-template-columns: 5% 5% 5% 5% 5% 5%;
+       align-items: baseline;
+       text-align: justify;
+       padding: 10px 10px 10px
+}
+
+.class4 {
+       margin-top: 20px;
+}

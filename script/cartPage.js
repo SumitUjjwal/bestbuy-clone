@@ -1,4 +1,4 @@
-let url = "https://6398c0f229930e2bb3c11afd.mockapi.io/mobiles/";
+let url = "https://6398c0f229930e2bb3c11afd.mockapi.io/laptops/";
 let item = document.getElementById("items");
 let price;
 let price_summary = document.getElementById("price_summary");

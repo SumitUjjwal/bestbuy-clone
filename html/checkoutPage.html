@@ -37,7 +37,7 @@
                             </div>
                             <div class="left_checkout_address_details">
                                    <h3>Shipping Address</h3>
-                                   <form>
+                                   <form id="add_form">
                                           <div class="left_checkout_form-row">
                                                  <div class="left_checkout_form_group col-md-6">
                                                         <label for="inputFirstName">First Name</label>
@@ -122,16 +122,16 @@
                                                         <input type="text" class="form-control" id="inputZip" required>
                                                  </div>
                                           </div>
-                                          <!-- <div class="left_checkout_form_group">
-                                                 <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                                                        <label class="form-check-label" for="gridCheck">
-                                                               Use as Billing Address
-                                                        </label>
-                                                 </div>
-                                          </div> -->
                                           <button type="submit" class="btn btn-primary" id="address_subm">Apply</button>
                                    </form>
+                                   <div id="userAddress">
+                                          <p id="userName">Sumit Ujjwal</p>
+                                          <p id="address">Aziz Baug, Chembur</p>
+                                          <p id="city">Mumbai</p>
+                                          <p id="state">Maharashtra</p>
+                                          <p id="zip">700041</p>
+                                          <div><span><a href="#">Edit this address</a></span> | <span><a href="#">Add a new address</a></span></div>
+                                   </div>
                             </div>
                      </div>
                      <!-- download details -->
@@ -171,7 +171,7 @@
                             <h2>Contact Information</h2>
                             <div class="left_checkout_form_group col-md-6">
                                    <label for="inputPhone">Phone Number</label>
-                                   <input type="tel" class="form-control" id="inputPhone" required>
+                                   <input type="tel" class="form-control" id="inputPhone" maxlength="10" required>
                             </div>
                             <!-- <label for="">Phone Number</label>
                             <input type="number">

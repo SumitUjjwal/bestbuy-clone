@@ -31,7 +31,7 @@ async function login(event) {
 async function show_data(category) {
        let request = await fetch(`https://6398c0f229930e2bb3c11afd.mockapi.io/${category}`);
        let data = await request.json();
-       // console.log(data)
+       console.log(data.img_src)
 
        products.innerHTML = "";
        let show_data = data.map((element) => {

@@ -27,7 +27,7 @@
                      <div class="left_checkout_shipping">
                             <div class="left_checkout_order_details">
                                    <h2>Shipping Details</h2>
-                                   <div>
+                                   <div id="item_details">
                                           <img class="product_image"
                                                  src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5721/5721600_sd.jpg;canvasHeight=100;canvasWidth=100"
                                                  alt="">
@@ -37,37 +37,33 @@
                             </div>
                             <div class="left_checkout_address_details">
                                    <h3>Shipping Address</h3>
-                                   <form>
-                                          <div class="form-row">
-                                                 <div class="form-group col-md-6">
-                                                        <label for="inputEmail4">Email</label>
-                                                        <input type="email" class="form-control" id="inputEmail4"
-                                                               placeholder="Email">
+                                   <form id="add_form">
+                                          <div class="left_checkout_form-row">
+                                                 <div class="left_checkout_form_group col-md-6">
+                                                        <label for="inputFirstName">First Name</label>
+                                                        <input type="text" class="form-control" id="inputFirstName" required>
                                                  </div>
-                                                 <div class="form-group col-md-6">
-                                                        <label for="inputPassword4">Password</label>
-                                                        <input type="password" class="form-control" id="inputPassword4"
-                                                               placeholder="Password">
+                                                 <div class="left_checkout_form_group col-md-6">
+                                                        <label for="inputLastName">Last Name</label>
+                                                        <input type="text" class="form-control" id="inputLastName" required>
                                                  </div>
                                           </div>
-                                          <div class="form-group">
+                                          <div class="left_checkout_form_group">
                                                  <label for="inputAddress">Address</label>
-                                                 <input type="text" class="form-control" id="inputAddress"
-                                                        placeholder="1234 Main St">
+                                                 <input type="text" class="form-control" id="inputAddress" required>
                                           </div>
-                                          <div class="form-group">
+                                          <div class="left_checkout_form_group">
                                                  <label for="inputAddress2">Address 2</label>
-                                                 <input type="text" class="form-control" id="inputAddress2"
-                                                        placeholder="Apartment, studio, or floor">
+                                                 <input type="text" class="form-control" id="inputAddress2" required>
                                           </div>
-                                          <div class="form-row">
-                                                 <div class="form-group col-md-6">
+                                          <div class="left_checkout_form-row">
+                                                 <div class="left_checkout_form_group col-md-6">
                                                         <label for="inputCity">City</label>
-                                                        <input type="text" class="form-control" id="inputCity">
+                                                        <input type="text" class="form-control" id="inputCity" required>
                                                  </div>
-                                                 <div class="form-group col-md-4">
+                                                 <div class="left_checkout_form_group col-md-4">
                                                         <label for="inputState">State</label>
-                                                        <select id="inputState" class="form-control">
+                                                        <select id="inputState" class="form-control" required>
                                                                <option selected>Choose...</option>
                                                                <option value="Alabama">AL</option>
                                                                <option value="Alaska">AK</option>
@@ -121,21 +117,21 @@
                                                                <option value="Wyoming">WY</option>
                                                         </select>
                                                  </div>
-                                                 <div class="form-group col-md-2">
+                                                 <div class="left_checkout_form_group col-md-2">
                                                         <label for="inputZip">ZIP Code</label>
-                                                        <input type="text" class="form-control" id="inputZip">
+                                                        <input type="text" class="form-control" id="inputZip" required>
                                                  </div>
                                           </div>
-                                          <div class="form-group">
-                                                 <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                                                        <label class="form-check-label" for="gridCheck">
-                                                               Use as Billing Address
-                                                        </label>
-                                                 </div>
-                                          </div>
-                                          <button type="submit" class="btn btn-primary">Apply</button>
+                                          <button type="submit" class="btn btn-primary" id="address_subm">Apply</button>
                                    </form>
+                                   <div id="userAddress">
+                                          <p id="userName">Sumit Ujjwal</p>
+                                          <p id="address">Aziz Baug, Chembur</p>
+                                          <p id="city">Mumbai</p>
+                                          <p id="state">Maharashtra</p>
+                                          <p id="zip">700041</p>
+                                          <div><span><a href="#">Edit this address</a></span> | <span><a href="#">Add a new address</a></span></div>
+                                   </div>
                             </div>
                      </div>
                      <!-- download details -->
@@ -148,7 +144,7 @@
                                           alt="">
                                    <p id="add_ons_included_free_1_desc">Apple - Free Apple Music for up to
                                           4 months (new or returning subscribers only)</p>
-                                   <button id="add_ons_included_free_1_remove">Remove</button>
+                                   <a class="add_ons_included_free_remove" href="">Remove</a>
                                    <h4 id="add_ons_included_free_1_price">FREE</h4>
                             </div>
                             <div id="add_ons_included_free_2" class="add_ons_included_free">
@@ -157,7 +153,7 @@
                                           alt="">
                                    <p id="add_ons_included_free_2_desc">Apple - Free iCloud+ for up to 3
                                           months (new or returning subscribers only)</p>
-                                   <button id="add_ons_included_free_2_remove">Remove</button>
+                                   <a class="add_ons_included_free_remove" href="">Remove</a>
                                    <h4 id="add_ons_included_free_2_price">FREE</h4>
                             </div>
                             <div id="add_ons_included_free_3" class="add_ons_included_free">
@@ -166,17 +162,22 @@
                                           alt="">
                                    <p id="add_ons_included_free_3_desc">Apple - Free Apple TV+ for 3
                                           months (new or returning subscribers only)</p>
-                                   <button id="add_ons_included_free_3_remove">Remove</button>
+                                   <a class="add_ons_included_free_remove" href="">Remove</a>
                                    <h4 id="add_ons_included_free_3_price">FREE</h4>
                             </div>
                      </div>
                      <!-- contact info -->
                      <div class="left_checkout_info">
                             <h2>Contact Information</h2>
+                            <div class="left_checkout_form_group col-md-6">
+                                   <label for="inputPhone">Phone Number</label>
+                                   <input type="tel" class="form-control" id="inputPhone" maxlength="10" required>
+                            </div>
+                            <!-- <label for="">Phone Number</label>
                             <input type="number">
                             <input type="checkbox"><label for="">Text me updates about all my orders, services and
-                                   appointments</label>
-                            <button>Continue to Payment Information</button>
+                                   appointments</label> -->
+                            <a href="/obnoxious-ladybug-6279/html/paymentPage.html"><button type="submit" class="btn-primary">Continue to Payment Information</button></a>
                      </div>
               </div>
 
@@ -185,14 +186,16 @@
                      <h2>Order Summary</h2>
                      <div class="right_checkout_shipping">
                             <h3>Shipping</h3>
-                            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5721/5721600_sd.jpg;canvasHeight=100;canvasWidth=100"
-                                   alt="">
-                            <p>MacBook Air 13.3" Laptop - Apple M1 chip - 8GB Memory
-                                   - 256GB SSD - Space Gray</p>
-                            <div>
-                                   <p>$799.99</p>
-                                   <p>Qty 1</p>
-                                   <a href="">Remove</a>
+                            <div id="right_item_details">
+                                   <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5721/5721600_sd.jpg;canvasHeight=100;canvasWidth=100"
+                                          alt="">
+                                   <p id="title">MacBook Air 13.3" Laptop - Apple M1 chip - 8GB Memory
+                                          - 256GB SSD - Space Gray</p>
+                                   <div>
+                                          <p id="price">$799.99</p>
+                                          <p>Qty 1</p>
+                                          <a href="">Remove</a>
+                                   </div>
                             </div>
                      </div>
                      <div class="right_checkout_digital">
@@ -204,7 +207,7 @@
                                    <p id="add_ons_included_free_1_desc">Apple - Free Apple Music for up to
                                           4 months (new or returning subscribers only)</p>
                                    <div>
-                                          <button id="add_ons_included_free_1_remove">Remove</button>
+                                          <a class="add_ons_included_free_remove" href="">Remove</a>
                                           <h4 id="add_ons_included_free_1_price">FREE</h4>
                                    </div>
                             </div>
@@ -215,7 +218,7 @@
                                    <p id="add_ons_included_free_2_desc">Apple - Free iCloud+ for up to 3
                                           months (new or returning subscribers only)</p>
                                    <div>
-                                          <button id="add_ons_included_free_2_remove">Remove</button>
+                                          <a class="add_ons_included_free_remove" href="">Remove</a>
                                           <h4 id="add_ons_included_free_2_price">FREE</h4>
                                    </div>
                             </div>
@@ -226,32 +229,32 @@
                                    <p id="add_ons_included_free_3_desc">Apple - Free Apple TV+ for 3
                                           months (new or returning subscribers only)</p>
                                    <div>
-                                          <button id="add_ons_included_free_3_remove">Remove</button>
+                                          <a class="add_ons_included_free_remove" href="">Remove</a>
                                           <h4 id="add_ons_included_free_3_price">FREE</h4>
                                    </div>
                             </div>
                      </div>
-                     <div class="right_checkout_price">
-                            <div>
+                     <div class="right_checkout_price" id="right_checkout_price">
+                            <div class="right_checkout_price_box">
                                    <p>Item Subtotal</p>
                                    <p>$799.99</p>
                             </div>
-                            <div>
+                            <div class="right_checkout_price_box">
                                    <p>Shipping</p>
                                    <p>FREE</p>
                             </div>
-                            <div>
+                            <div class="right_checkout_price_box">
                                    <p>Estimated Sales Tax</p>
                                    <p>$59.00</p>
                             </div>
                             <p>You're saving $200 on your order today!</p>
-                            <div>
-                                   <h1>Total</h1>
-                                   <h1>$858.99</h1>
+                            <div class="right_checkout_price_box">
+                                   <h2>Total</h2>
+                                   <h2>$858.99</h2>
                             </div>
                      </div>
               </div>
        </div>
 </body>
-
+<script src="/obnoxious-ladybug-6279/script/checkoutPage.js"></script>
 </html>

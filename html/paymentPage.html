@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>payment</title>
+       <link rel="stylesheet" href="/obnoxious-ladybug-6279/style/checkoutPage.css">
+       <link rel="stylesheet" href="/obnoxious-ladybug-6279/style/paymentPage.css">
+       <link rel="stylesheet" href="/obnoxious-ladybug-6279/style/utility.css">
+</head>
+
+<body>
+       <div id="checkout_nav_bar">
+              <div id="inner_checkout_nav_bar">
+                     <div id="checkout_page_logo">
+                            <img src="/obnoxious-ladybug-6279/admin_panel/resource_admin/Digital_basket_white (1).png"
+                                   alt="" width="100px"><span>Checkout</span>
+                     </div>
+                     <a href="/obnoxious-ladybug-6279/html/cartPage.html">Return to cart</a>
+              </div>
+       </div>
+       <div class="checkout_container">
+              <!-- left container -->
+              <div class="left_checkout_container">
+                     <h1 class="heading"> Payment Information </h1>
+                     <!-- payment details -->
+                     <div class="left_payment">
+                            <div class="left_payment_details">
+                                   <h3>Credit or Debit Card Number</h3>
+                                   <div class="card_details">
+                                          <input id="card_num" type="tel" inputmode="numeric" maxlength="16"
+                                                 placeholder="1234 1234 1234 1234">
+                                          <div class="cards">
+                                                 <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/MyBBYCC-3feb97d2-f3fa-4908-9502-2a8715237d93.png" alt="">
+                                                 <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/MBBVC_YellowEdge_Contactless_RGB_Final-9736ce9f-b00a-43ea-a36b-d6fbce539f4e.png" alt="">
+                                                 <img src="https://pisces.bbystatic.com/image2/vector/BestBuy_US/Gallery/payment-mastercard-217874.svg" alt="">
+                                                 <img src="https://pisces.bbystatic.com/image2/vector/BestBuy_US/Gallery/logo-visa-217847.svg" alt="">
+                                                 <img src="https://pisces.bbystatic.com/image2/vector/BestBuy_US/Gallery/payment-discover-217870.svg" alt="">
+                                                 <img src="https://pisces.bbystatic.com/image2/vector/BestBuy_US/Gallery/payment-amex-217866.svg" alt="">
+                                                 <img src="https://pisces.bbystatic.com/image2/vector/BestBuy_US/Gallery/payment-unionpay-217878.svg" alt="">
+                                                 <img src="https://pisces.bbystatic.com/image2/vector/BestBuy_US/Gallery/payment-jcb-217873.svg" alt="">
+                                          </div>
+                                   </div>
+                            </div>
+                            <a href="#">Other payment options</a>
+                            <a href="#">Use a Best Buy Gift Card, Store Credit or Discount Code</a>
+                            <div id="userAddress">
+                                   <!-- <h4>Billing Details</h4>
+                                   <p id="userName">Sumit Ujjwal</p>
+                                   <p id="address">Aziz Baug, Chembur</p>
+                                   <p id="city">Mumbai</p>
+                                   <p id="state">Maharashtra</p>
+                                   <p id="zip">700041</p>
+                                   <div><span><a href="#">Edit this address</a></span> | <span><a href="#">Add a new address</a></span></div> -->
+                            </div>
+                     </div>
+                     <!-- payment button -->
+                     <div class="left_payment_button">
+                            <p>By placing your order, you agree to our BestBuy.com Terms and Conditions and our Privacy
+                                   Policy.</p>
+                            <a href="#"><button type="submit" class="btn-primary yl_btn">Place Your Order</button></a>
+                     </div>
+              </div>
+
+              <!-- right container -->
+              <div class="right_checkout_container">
+                     <h2>Order Summary</h2>
+                     <div class="right_checkout_shipping">
+                            <h3>Shipping</h3>
+                            <div id="right_item_details">
+                                   <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5721/5721600_sd.jpg;canvasHeight=100;canvasWidth=100"
+                                          alt="">
+                                   <p id="title">MacBook Air 13.3" Laptop - Apple M1 chip - 8GB Memory
+                                          - 256GB SSD - Space Gray</p>
+                                   <div>
+                                          <p id="price">$799.99</p>
+                                          <p>Qty 1</p>
+                                          <a href="">Remove</a>
+                                   </div>
+                            </div>
+                     </div>
+                     <div class="right_checkout_digital">
+                            <h3>Digital Delivery</h3>
+                            <div id="add_ons_included_free_1" class="add_ons_included_free">
+                                   <img id="add_ons_included_free_1_img"
+                                          src="https://pisces.bbystatic.com/image2//BestBuy_US/images/products/6515/6515311_sa.jpg;maxHeight=200;maxWidth=200"
+                                          alt="">
+                                   <p id="add_ons_included_free_1_desc">Apple - Free Apple Music for up to
+                                          4 months (new or returning subscribers only)</p>
+                                   <div>
+                                          <a class="add_ons_included_free_remove" href="">Remove</a>
+                                          <h4 id="add_ons_included_free_1_price">FREE</h4>
+                                   </div>
+                            </div>
+                            <div id="add_ons_included_free_2" class="add_ons_included_free">
+                                   <img id="add_ons_included_free_2_img"
+                                          src="https://pisces.bbystatic.com/image2//BestBuy_US/images/products/6515/6515325cv11a.jpg;maxHeight=200;maxWidth=200"
+                                          alt="">
+                                   <p id="add_ons_included_free_2_desc">Apple - Free iCloud+ for up to 3
+                                          months (new or returning subscribers only)</p>
+                                   <div>
+                                          <a class="add_ons_included_free_remove" href="">Remove</a>
+                                          <h4 id="add_ons_included_free_2_price">FREE</h4>
+                                   </div>
+                            </div>
+                            <div id="add_ons_included_free_3" class="add_ons_included_free">
+                                   <img id="add_ons_included_free_3_img"
+                                          src="https://pisces.bbystatic.com/image2//BestBuy_US/images/products/6484/6484511_sa.jpg;maxHeight=200;maxWidth=200"
+                                          alt="">
+                                   <p id="add_ons_included_free_3_desc">Apple - Free Apple TV+ for 3
+                                          months (new or returning subscribers only)</p>
+                                   <div>
+                                          <a class="add_ons_included_free_remove" href="">Remove</a>
+                                          <h4 id="add_ons_included_free_3_price">FREE</h4>
+                                   </div>
+                            </div>
+                     </div>
+                     <div class="right_checkout_price" id="right_checkout_price">
+                            <div class="right_checkout_price_box">
+                                   <p>Item Subtotal</p>
+                                   <p>$799.99</p>
+                            </div>
+                            <div class="right_checkout_price_box">
+                                   <p>Shipping</p>
+                                   <p>FREE</p>
+                            </div>
+                            <div class="right_checkout_price_box">
+                                   <p>Estimated Sales Tax</p>
+                                   <p>$59.00</p>
+                            </div>
+                            <p>You're saving $200 on your order today!</p>
+                            <div class="right_checkout_price_box">
+                                   <h2>Total</h2>
+                                   <h2>$858.99</h2>
+                            </div>
+                     </div>
+              </div>
+       </div>
+</body>
+<script src="/obnoxious-ladybug-6279/script/paymentPage.js"></script>
+</html>

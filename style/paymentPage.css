@@ -1,0 +1,76 @@
+.checkout_container{
+       margin-bottom: 20px;
+}
+
+.left_checkout_container{
+       height: auto;
+}
+.left_payment{
+       display: flex;
+       flex-direction: column;
+       border-bottom: 1px solid grey;
+}
+
+.card_details {
+       border-bottom: 1px solid grey;
+       /* margin: 0px 0px 20px; */
+}
+
+.card_details>:nth-child(1) {
+       width: 80%;
+       margin: 10px auto;
+       padding: 8px;
+       border-radius: 4px;
+       border-color: #0046be;
+}
+
+.card_details>:nth-child(2) {
+       display: flex;
+       justify-content: space-evenly;
+       width: 100%;
+       margin: 0px 0px 20px;
+}
+
+.card_details>:nth-child(2) img {
+       width: 10%;
+}
+
+.left_payment>a{
+       border-bottom: 1px solid grey;
+       padding: 10px;
+       text-decoration: none;
+       color: #0046be;
+       font-size: 13px;
+}
+
+.left_payment>:nth-child(4)>p{
+       /* border: 1px solid red; */
+       margin: 0px 15px;
+}
+
+.left_payment>:nth-child(4)>#zip{
+       margin: 0px 15px 10px;
+}
+
+.left_payment>:nth-child(4)>h4{
+       margin: 10px 0px;
+}
+
+.left_payment>:nth-child(4) a{
+       text-decoration: none;
+       color: #0046be;
+       font-size: 13px;
+}
+
+.left_payment>:nth-child(4) div{
+       margin-bottom: 15px;
+}
+
+.left_payment_button>p{
+       font-size: 10px;
+}
+
+.left_payment_button button{
+       width: 100%;
+       color: black;
+}

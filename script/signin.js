@@ -1,9 +1,20 @@
 let form = document.querySelector('form')
-form.addEventListener('submit', (e)=>{
+let obj = JSON.parse(localStorage.getItem('authDetails'))
+
+form.addEventListener('submit', (e) => {
     e.preventDefault();
-    let obj = {
-        email: form.email.value,
-        pass: form.pass.value,
-    }
+    let email = form.email.value;
+    let Password = form.pass.value;
+    console.log(email, Password)
+    console.log(obj.email, obj.pass)
+    console.log(obj.pass == Password)
+    console.log(obj.email == Password)
     console.log(obj)
+    if(email==obj.email && Password == obj.pass){
+        alert('Login Successfully!')
+        window.location.href = '../index.html'
+
+    } else {
+        alert('Wrong Credentials!')
+    }
 })

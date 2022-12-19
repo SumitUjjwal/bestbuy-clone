@@ -885,9 +885,7 @@
 /* !---------| Media Query |----------------------- */
 
 @media screen and (max-width: 992px) {
-    body {
-        background: green;
-    }
+
 
     /* top section */
     .topSection_cards_innerContainer {
@@ -983,9 +981,6 @@
 }
 
 @media screen and (max-width: 768px) {
-    body {
-        background: yellow;
-    }
 
     /* top section */
     .topSection_cards_innerContainer {
@@ -1097,9 +1092,7 @@
 }
 
 @media screen and (max-width: 576px) {
-    body {
-        background: red;
-    }
+
 
     /* top section */
     .topSection_cards_innerContainer {

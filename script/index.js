@@ -3,7 +3,7 @@ import data from "../resources/data_files/topSectionObjects.js"
 
 let topSectionCardsMain = document.querySelector('.topSection_cards_innerContainer')
 renderTopSectionCards()
-function renderTopSectionCards(){
+function renderTopSectionCards() {
     topSectionCardsMain.innerHTML = data.map(item => {
         return `
         <div class="topSection_card_container">
@@ -38,13 +38,13 @@ function moveForward() {
 }
 
 rightBtn.addEventListener('click', (e) => {
-        moveForward()
+    moveForward()
 })
 
 function moveBackward() {
     let moveVal = cardWidth * slideIndexPrev;
-    if (slideIndexNext <= slideIndexPrev){
-        moveVal=0;
+    if (slideIndexNext <= slideIndexPrev) {
+        moveVal = 0;
     }
     track.style.transform = `translateX(${moveVal}px)`
     slideIndexPrev++;
@@ -56,11 +56,11 @@ leftBtn.addEventListener('click', (e) => {
 
 // ----------------------------------
 let search = document.querySelector('#searchBtn')
-search.addEventListener('click', ()=>{
+search.addEventListener('click', () => {
 
     let seachVal = document.querySelector('#inputSearch').value;
     localStorage.setItem('searchVal', seachVal)
-    window.location.href = '/obnoxious-ladybug-6279/html/searchPage.html'
+    window.location.href = '../html/searchPage.html'
 })
 
 

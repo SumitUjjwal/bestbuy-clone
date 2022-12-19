@@ -252,25 +252,19 @@ header{
 /* -- media query -- */
 
 @media screen and (max-width: 940px){
-     body{
-       background: #000;
-     }
+ 
      .bottom_nav_container{
        display: none;
      }
 } 
 @media screen and (max-width: 720px){
-     body{
-       background: red;
-     }
+  
      .top_nav_logo img{
        width: 60px
      }
 } 
 @media screen and (max-width: 520px){
-     body{
-       background: green;
-     }
+
      .top_nav_logo img{
        width: 60px
      }

@@ -2,19 +2,21 @@
 import data from "../resources/data_files/topSectionObjects.js"
 
 let topSectionCardsMain = document.querySelector('.topSection_cards_innerContainer')
-
-topSectionCardsMain.innerHTML = data.map(item => {
-    return `
-    <div class="topSection_card_container">
-        <a class="topSection_card_imgBox">
-            <img src="${item.src}" alt="${item.title}">
-        </a>
-        <a href="" class="topSection_card_textBox">
-             ${item.title}
-        </a>
-    </div>
-    `
-}).join("")
+renderTopSectionCards()
+function renderTopSectionCards(){
+    topSectionCardsMain.innerHTML = data.map(item => {
+        return `
+        <div class="topSection_card_container">
+            <a class="topSection_card_imgBox">
+                <img src="${item.src}" alt="${item.title}">
+            </a>
+            <a href="" class="topSection_card_textBox">
+                 ${item.title}
+            </a>
+        </div>
+        `
+    }).join("")
+}
 
 //-------- Bottom carousel ----------
 let leftBtn = document.querySelector('.bottom_carousel_prev_button');
@@ -52,6 +54,14 @@ leftBtn.addEventListener('click', (e) => {
     moveBackward()
 })
 
+// ----------------------------------
+let search = document.querySelector('#searchBtn')
+search.addEventListener('click', ()=>{
+
+    let seachVal = document.querySelector('#inputSearch').value;
+    localStorage.setItem('searchVal', seachVal)
+    window.location.href = '/obnoxious-ladybug-6279/html/searchPage.html'
+})
 
 
 

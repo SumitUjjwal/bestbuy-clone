@@ -7,142 +7,385 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../style/searchPage.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style/utility.css">
+    <link rel="stylesheet" href="../style/navBar.css">
+    <link rel="stylesheet" href="../style/footer.css">
+
+    <script src="https://kit.fontawesome.com/2cdd242e4b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <input id="entr" type="text" placeholder="search here">
-    <button id="search">Search</button>
-    <div id="container">
-        <div id="menu-sec">
-        <div id="contnt">
-            <div id="get_fast">
-                <h3>Get it fast</h3>
-            </div>
-            <div id="store_pickup">
-                <div id="store">
-                <span><strong>Store Pickup</strong></span>
-                <span> at India and nearby Stores</span>
-                </div>
-                <div id="pick_Up">
-                <input type="checkbox" id="rdy">
-                <label for="rdy">Ready Today </label>
-                </div>
-            </div>
-            <div id="avlbl">
-                <div id="avlbl_hd"><strong>Availability</strong></div>
-                <div id="avlbl_chckbx">
-                <input type="checkbox" id="excld">
-                <label for="excld">Exclude out of stock items</label>
-                </div>
-                </div>
-                <div id="cat">
-                    <div id="ctgry"><strong>Category</strong></div>
-                    <div class="cat_list">
-                        <h4>Unlocked Cell Phone</h4>
-                    <ul class="cat_ul">
-                    <li>All Unclocked Cell Phones</li>
-                    </ul>
-                        <h4>Cell Phone Accessories</h4>
-                    <ul class="cat_ul">
-                    <li>Cell Phone Cases</li>
-                    <li>Cell Phone Screen Protectors</li>
-                    <li>Cell Phone Batteries & Chargers</li>
-                    <li>Car & Travel Accessories</li>
-                    <li>Adapters & Cables</li>
-                    <li>Photography Accessories</li>
-                    <li>Photography Accessories</li>
-                    <li>Bluetooth Trackers</li>
-                    <li>iPhone Accessories</li>
-                    <li>SIM Cards</li>
-                    <li>Cell Phone Grips</li>
-                    <li>Cell Phone Signal Boosters</li>
-                    <li>Samsung Galaxy Accessories</li>
-                    <li>Bluetooth Headsets</li>
-                    <li>Mobile Hotspots</li>
-                    <li>Cell Phone Care & Cleaning</li>
-                    </ul>
-                    <h4> All Cell Phones with Plans</h4>
-                    <h4>Prepaid Phones & Plans</h4>
-                    <h4>Computer Accessories & Peripherals</h4>
-                    <h4>Tablet Accessories</h4>
-                    <h4>Digital Camera Accessories</h4>
-                    <h4>Furniture & Decor</h4>
-                    <h4>Eyewear</h4>
-                    <h4>Camcorder Accessories</h4>
-                    <h4>Apple Watch</h4>
-                    <h4>Headphones</h4>
-                    <h4>Car Safety & Security</h4>
-                    <h4>Docks, Radios & Boomboxes</h4>
+
+    <!--! --- navigation--- -->
+    <header>
+        <div class="top_nav_container">
+            <!-- top nav bar -->
+            <div class="top_nav">
+                <div>
+                    <div class="top_nav_logo">
+                        <a href="/obnoxious-ladybug-6279/index.html"><img
+                                src="/obnoxious-ladybug-6279/admin_panel/resource_admin/Digital_basket_white (1).png"
+                                width="100px" alt=""></a>
                     </div>
+                    <div class="top_nav_menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" git
+                            fill="currentColor"
+                            class="bi bi-list"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                        <p>Menu</p>
+                    </div>
+                    <div class="top_nav_input">
+                        <input type="text" placeholder="Search Product Here" id="inputSearch">
+
+                        <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor"
+                            class="bi bi-search"
+                            viewBox="0 0 16 16" id="searchBtn">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </div>
+                </div>
+                <div>
+
+                    <div class="top_nav_store">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor"
+                            class="bi bi-shop-window" viewBox="0 0 16 16">
+                            <path
+                                d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zm2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5z" />
+                        </svg>
+                        <p>Aiea</p>
+                    </div>
+                    <div class="top_nav_cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor"
+                            class="bi bi-cart3"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                        </svg>
+                        <a href="/obnoxious-ladybug-6279/html/cartPage.html">
+
+                            <p>Cart</p>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="bottom_nav_container">
+            <!-- bottom nav bar -->
+            <div class="bottom_nav">
+                <div class="bottom_nav_left">
+                    <a href="./html/topDealsPage.html">Holiday Deals</a>
+                    <a href="./html/topDealsPage.html">Top Deals</a>
+                    <a href="./html/topDealsPage.html">Deal of the Day</a>
+                    <a href="./html/topDealsPage.html">Totaltech Membership</a>
+                    <a href="./html/topDealsPage.html">Credit cards</a>
+                </div>
+                <div class="bottom_nav_right">
+                    <div class="dropdown">
+                        <a href="">Account</a>
+                        <div class="dropdown-options">
+                            <a href="#"><button>Sign In</button></a>
+                            <a href="#"><button>Create Account</button></a>
+                        </div>
+                    </div>
+                    <a href="">Recently Viewed</a>
+                    <a href="">Order Status</a>
+                    <a href="">Saved Items</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div id="container">
+            <div id="menu-sec">
+                <div id="contnt">
+                    <div id="get_fast">
+                        <h3>Get it fast</h3>
+                    </div>
+                    <div id="store_pickup">
+                        <div id="store">
+                            <strong>Store Pickup</strong>
+                            <span> at India and nearby Stores</span>
+                        </div>
+                        <div id="pick_Up">
+                            <input type="checkbox" id="rdy">
+                            <label for="rdy">Ready Today </label>
+                        </div>
+                    </div>
+                    <div id="avlbl">
+                        <div id="avlbl_hd"><strong>Availability</strong></div>
+                        <div id="avlbl_chckbx">
+                            <input type="checkbox" id="excld">
+                            <label for="excld">Exclude out of stock items</label>
+                        </div>
                     </div>
                     <div id="pr_chck">
                         <div id="ctgry"><strong>Price</strong></div>
-                        <div class="cat_list inpt_val">
-                        <input type="text" id="min" placeholder="min.">
-                        <input type="text" id="max" placeholder="max.">
-        </div>
-        <div class="cat_list">
-            <input type="checkbox" id="less_thn_25">
-            <label for="less_thn_25"> Less than $25(1173)</label><br>
-            <input type="checkbox" id="">
-            <label for="">$25 - $49.99(1216)</label><br>
-            <input type="checkbox" id="">
-            <label for="">$50 - $74.99(178)</label><br>
-            <input type="checkbox" id="">
-            <label for="">$75 - $99.99(128)</label><br>
-            <input type="checkbox" id="">
-            <label for="">$100 - $149.99(65)</label><br>
-            <input type="checkbox" id="">
-            <label for="">$150 - $199.99(30)</label><br>
-            <input type="checkbox" id="">
-            <label for=""> $200 - $249.99(18)</label><br>
-            <input type="checkbox" id="">
-            <label for="">$250 - $499.99(63)</label><br>
-            <input type="checkbox" id="">
-            <label for="">$500 - $749.99(36)</label><br>
-            <input type="checkbox" id="">
-            <label for="">$1000 - $1249.99(15)</label><br>
-            <input type="checkbox" id="">
-            <label for="">$1250 - $1499.99(10)</label><br>
-            <input type="checkbox" id="">
-            <label for=""> $1500 - $1999.99(3)</label><br>
+                        <div class="cat_list">
+                            <input type="checkbox" id="less_thn_25">
+                            <label for="less_thn_25"> Less than $25(1173)</label><br>
+                            <input type="checkbox" id="">
+                            <label for="">$25 - $49.99(1216)</label><br>
+                            <input type="checkbox" id="">
+                            <label for="">$50 - $74.99(178)</label><br>
+                            <input type="checkbox" id="">
+                            <label for="">$75 - $99.99(128)</label><br>
+                            <input type="checkbox" id="">
+                            <label for="">$100 - $149.99(65)</label><br>
+                            <input type="checkbox" id="">
+                            <label for="">$150 - $199.99(30)</label><br>
+                            <input type="checkbox" id="">
+                            <label for=""> $200 - $249.99(18)</label><br>
+                            <input type="checkbox" id="">
+                            <label for="">$250 - $499.99(63)</label><br>
+                            <input type="checkbox" id="">
+                            <label for="">$500 - $749.99(36)</label><br>
+                            <input type="checkbox" id="">
+                            <label for="">$1000 - $1249.99(15)</label><br>
+                            <input type="checkbox" id="">
+                            <label for="">$1250 - $1499.99(10)</label><br>
+                            <input type="checkbox" id="">
+                            <label for=""> $1500 - $1999.99(3)</label><br>
+                        </div>
+                        <div id="br_chck">
+                            <div id="ctgry"><strong>Brand</strong></div>
+                            <div class="cat_list ">
+                                <input type="text" id="br_srch" placeholder="search">
+                            </div>
+                            <div class="cat_list">
+                                <input type="checkbox" id="">
+                                <label for="">OnePlus(7)</label><br>
+                                <input type="checkbox" id="">
+                                <label for="">Samsung(391)</label><br>
+                                <input type="checkbox" id="">
+                                <label for="">Apple(514)</label><br>
+                                <input type="checkbox" id="">
+                                <label for="">Google(62)</label><br>
+                                <input type="checkbox" id="">
+                                <label for="">Motorola(32)</label><br>
+                                <input type="checkbox" id="">
+                                <label for="">Sony(11)</label><br>
+                                <input type="checkbox" id="">
+                                <label for="">SaharaCase(620)</label><br>
+                                <input type="checkbox" id="">
+                                <label for="">Microsoft(100)</label><br>
+                                <input type="checkbox" id="">
+                                <label for="">Tech21(13)</label><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="br_chck">
-                <div id="ctgry"><strong>Brand</strong></div>
-                <div class="cat_list ">
-                <input type="text" id="br_srch" placeholder="search">
-</div>
-<div class="cat_list">
-    <input type="checkbox" id="less_thn_25">
-    <label for="less_thn_25"> Best Buy Brands(360)</label><br>
-    <input type="checkbox" id="">
-    <label for="">OnePlus(7)</label><br>
-    <input type="checkbox" id="">
-    <label for="">Samsung(391)</label><br>
-    <input type="checkbox" id="">
-    <label for="">Apple(514)</label><br>
-    <input type="checkbox" id="">
-    <label for="">Google(62)</label><br>
-    <input type="checkbox" id="">
-    <label for="">Motorola(32)</label><br>
-    <input type="checkbox" id="">
-    <label for="">Sony(11)</label><br>
-    <input type="checkbox" id="">
-    <label for="">SaharaCase(620)</label><br>
-    <input type="checkbox" id="">
-    <label for="">Microsoft(100)</label><br>
-    <input type="checkbox" id="">
-    <label for="">Tech21(13)</label><br>
-    </div>
-</div>
+            <div class="right_section">
+                <!-- <div class="item_container">
+                <div class="product_image">
+                    <img src="../resources/inspired_deals/m1.png" alt="">
+                </div>
+                <div class="product_details">
+                    <h4>
+                        Lenovo - Ideapad 3i 15.6" HD Touch Laptop - Core i3-1115G4 - 8GB Memory - 256GB SSD - Platinum
+                        Grey
+                    </h4>
+                    <div class="product_model_details">
+                        <p>Model: <span>81X800MCUS</span></p>
+                        <p>SKU: <span>6511950</span></p>
+                    </div>
+
+                    <div class="product_rating">
+                        <div>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <span>(205)</span>
+                    </div>
+                    <h5>Get it today</h5>
+                    <div class="product_pickup_details">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <div>
+                            <p>Pickup: <span>Ready in 1 hour at Aiea</span></p>
+                            <span>See all pickup location</span>
+                        </div>
+                    </div>
+                    <div class="product_pickup_details">
+                        <i class="fa-solid fa-store"></i>
+                        <div id="shipping">
+                            <p>This item is only available in certain markets.</p>
+                            <span>Estimates for 96939</span>
+                        </div>
+                    </div>
+                    <div class="product_checkbox">
+                        <div>
+                            <input type="checkbox" id="compare" name="compare" value="">
+                            <label for="compare"> Compare</label><br>
+                        </div>
+                        <div>
+                            <i class="fa-regular fa-bookmark"></i>
+                            <span>Save</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product_payment">
+                    <h1>$ <span>279.99</span></h1>
+                    <div class="product_price_save">
+                        <span>Save $220</span>
+                        <span>Was $499.99</span>
+                    </div>
+                    <h6>Free 6 months of security software</h6>
+                    <span>$29.99 value</span>
+                    <button> <span><i class="fa-solid fa-cart-shopping"></i> </span> Add to Cart</button>
+                    <p>Open-Box: <span>from $234.99</span></p>
+                </div>
+            </div> -->
+                <h1 style="display: flex; justify-content: center">Loading...</h1>
+            </div>
         </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="sec_1">
+            <div>
+                <div>
+                    <i class="fa-regular fa-circle-question font-60"></i>
+                </div>
+                <a href="#">Visit Our Support Center</a>
+            </div>
+            <div>
+                <div>
+                    <i class="fa-solid fa-dolly font-60"></i>
+                </div>
+                <a href="#">Check your Order Status</a>
+            </div>
+            <div>
+                <div>
+                    <i class="fa-solid fa-truck-fast font-60"></i>
+                </div>
+                <a href="#">Shipping, Delivery & Store Pickup</a>
+            </div>
+            <div>
+                <div>
+                    <i class="fa-solid fa-right-left font-60"></i>
+                </div>
+                <a href="#">Returns & Exchanges</a>
+            </div>
+            <div>
+                <div>
+                    <i class="fa-solid fa-dollar-sign font-60"></i>
+                </div>
+                <a href="#">Price Match Guarantee</a>
+            </div>
         </div>
+        <div class="hl"></div>
+        <div class="sec_2">
+            <div id="sec_2-1">
+                <div>
+                    <h3>Order & Purchases</h3>
+                    <p>Check Order Status</p>
+                    <p>Shipping, Delivery & Pickup</p>
+                    <p>Returns & Exchanges</p>
+                </div>
+                <div>
+                    <h3>Support & Services</h3>
+                    <p>Visit our Support Center</p>
+                    <p>Shop with an Expert</p>
+                    <p>Schedule a Service</p>
+                </div>
+                <div>
+                    <h3>Partnerships</h3>
+                    <p>Digital Basket Totaltech</p>
+                    <p>My Digital Basket</p>
+                    <p>View Points & Certificates</p>
+                    <p>Member Offers</p>
+                </div>
+                <div>
+                    <h3>Payment Options</h3>
+                    <p>Affiliate Program</p>
+                    <p>Advertise with Us</p>
+                    <p>Developers</p>
+                </div>
+                <div>
+                    <h3>Rewards & Membership</h3>
+                    <p>My Digital Basket® Credit Card</p>
+                    <p>Pay Your Bill at Citibank</p>
+                    <p>Lease to Own</p>
+                </div>
+                <div>
+                    <h3>About Digital Basket</h3>
+                    <p> Corporate Information</p>
+                    <p>Careers</p>
+                    <p>Corporate Responsibility & Sustainability</p>
+                    <p>Discover & Learn</p>
+                </div>
+            </div>
+            <div id="footer_form">
+                <h2>Sign in or Create Account</h2>
+                <div class="hl"></div>
+                <h3>Get the latest deals and more.</h3>
+                <div class=".footer_email_form">
+                    <input type="text" placeholder="Enter email Address">
+                    <input type="submit" value="Sign Up">
+                </div>
+                <div class="hl" style="margin-top: 30px;"></div>
+                <div>
+                    <i class="fa-solid fa-mobile"></i>
+                    <div>
+                        <span>Digital Basket App </span>
+                        <span>Learn more ></span>
+                    </div>
+                </div>
+                <div class="hl"></div>
+                <div>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div class="hl"></div>
+                <p>Forums, blogs & more</p>
+            </div>
         </div>
-        <div id="whole_prod">
+        <div>
+            <p>How was your experience?<span>Give feedback about our website</span></p>
+            <div>
+                <p>Mobile Site</p>
+                <p>Digital Basket Canada</p>
+            </div>
         </div>
-    </div>
+        <div class="hl"></div>
+        <div id="sec_3">
+            <div>
+                <p>Accessibility</p>
+                <p>Terms & Conditions</p>
+                <p>Privacy</p>
+                <p>Interest-Based Ads</p>
+                <p>California Privacy Rights</p>
+                <p>Do Not Sell My Personal Information</p>
+                <p>California Supply Chain Transparency Act</p>
+            </div>
+            <div>
+                In-store pricing may vary. Prices and offers are subject to change. © 2022 Digital Basket. All rights
+                reserved. Digital Basket, the Digital Basket logo, the tag design, and MY Digital Basket are trademarks
+                of Digital Basket and
+                its affiliated companies.
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>
-<script src="../script/searchPage.js"></script>
+<script src="../script/searchPage.js" type="module"></script>

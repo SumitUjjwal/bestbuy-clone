@@ -4,17 +4,12 @@
        font-family: "Roboto", sans-serif;
 }
 
-#hello {
-       height: 1999px;
-}
-
 /* top container */
 .top_nav_container {
        background-color: #0046BE;
        color: white;
        position: sticky;
        top: 0px;
-
 }
 
 .top_nav {
@@ -121,7 +116,7 @@
 }
 
 .top_nav_cart>svg {
-       width: 30px;
+       width: 20%;
        height: 25px;
 }
 
@@ -212,4 +207,14 @@
 .dropdown:hover .dropdown-options button:hover {
        background-color: #0046BE;
        color: white;
+}
+
+/* media queries */
+@media screen and (max-width: 580px){
+       .top_nav_menu, .top_nav_store{
+              display: none;
+       }
+       .top_nav_input{
+              width: 50%;
+       }
 }

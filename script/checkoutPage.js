@@ -15,46 +15,46 @@ let form = document.getElementById("add_form");
 let address = document.getElementById("userAddress");
 
 // setting details on DOM
-item_details.innerHTML = 
-`
-       <img class="product_image"
-              src="${img_src}"
-              alt="">
-       <p class="product_title">${title}</p>
-`;
+// item_details.innerHTML = 
+// `
+//        <img class="product_image"
+//               src="${img_src}"
+//               alt="">
+//        <p class="product_title">${title}</p>
+// `;
 
-right_item_details.innerHTML = 
-`
-      <img src="${img_src}"
-              alt="">
-       <p id="title">${title}</p>
-       <div>
-              <p id="price">$${price}</p>
-              <p>Qty 1</p>
-              <a href="">Remove</a>
-       </div> 
-`;
+// right_item_details.innerHTML = 
+// `
+//       <img src="${img_src}"
+//               alt="">
+//        <p id="title">${title}</p>
+//        <div>
+//               <p id="price">$${price}</p>
+//               <p>Qty 1</p>
+//               <a href="">Remove</a>
+//        </div> 
+// `;
 
-right_checkout_price.innerHTML = 
-`
-      <div class="right_checkout_price_box">
-              <p>Item Subtotal</p>
-              <p>$${price}</p>
-       </div>
-       <div class="right_checkout_price_box">
-              <p>Shipping</p>
-              <p>FREE</p>
-       </div>
-       <div class="right_checkout_price_box">
-              <p>Estimated Sales Tax</p>
-              <p>$${tax}</p>
-       </div>
-       <p>You're saving $200 on your order today!</p>
-       <div class="right_checkout_price_box">
-              <h2>Total</h2>
-              <h2>$${total_price}</h2>
-       </div> 
-`
+// right_checkout_price.innerHTML = 
+// `
+//       <div class="right_checkout_price_box">
+//               <p>Item Subtotal</p>
+//               <p>$${price}</p>
+//        </div>
+//        <div class="right_checkout_price_box">
+//               <p>Shipping</p>
+//               <p>FREE</p>
+//        </div>
+//        <div class="right_checkout_price_box">
+//               <p>Estimated Sales Tax</p>
+//               <p>$${tax}</p>
+//        </div>
+//        <p>You're saving $200 on your order today!</p>
+//        <div class="right_checkout_price_box">
+//               <h2>Total</h2>
+//               <h2>$${total_price}</h2>
+//        </div> 
+// `
 
 // adding event listener to address button
 

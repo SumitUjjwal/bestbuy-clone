@@ -13,44 +13,45 @@ let right_item_details = document.getElementById("right_item_details");
 let right_checkout_price = document.getElementById("right_checkout_price");
 let address_subm_btn = document.getElementById("address_subm");
 let user_address = document.getElementById("userAddress");
+let payment_btn = document.getElementById("payment_btn");
 
 // setting details on DOM
 
-right_item_details.innerHTML =
-       `
-      <img src="${img_src}"
-              alt="">
-       <p id="title">${title}</p>
-       <div>
-              <p id="price">$${price}</p>
-              <p>Qty 1</p>
-              <a href="">Remove</a>
-       </div> 
-`;
+// right_item_details.innerHTML =
+//        `
+//       <img src="${img_src}"
+//               alt="">
+//        <p id="title">${title}</p>
+//        <div>
+//               <p id="price">$${price}</p>
+//               <p>Qty 1</p>
+//               <a href="">Remove</a>
+//        </div> 
+// `;
 
-right_checkout_price.innerHTML =
-       `
-      <div class="right_checkout_price_box">
-              <p>Item Subtotal</p>
-              <p>$${price}</p>
-       </div>
-       <div class="right_checkout_price_box">
-              <p>Shipping</p>
-              <p>FREE</p>
-       </div>
-       <div class="right_checkout_price_box">
-              <p>Estimated Sales Tax</p>
-              <p>$${tax}</p>
-       </div>
-       <p>You're saving $200 on your order today!</p>
-       <div class="right_checkout_price_box">
-              <h2>Total</h2>
-              <h2>$${total_price}</h2>
-       </div> 
-`
+// right_checkout_price.innerHTML =
+//        `
+//       <div class="right_checkout_price_box">
+//               <p>Item Subtotal</p>
+//               <p>$${price}</p>
+//        </div>
+//        <div class="right_checkout_price_box">
+//               <p>Shipping</p>
+//               <p>FREE</p>
+//        </div>
+//        <div class="right_checkout_price_box">
+//               <p>Estimated Sales Tax</p>
+//               <p>$${tax}</p>
+//        </div>
+//        <p>You're saving $200 on your order today!</p>
+//        <div class="right_checkout_price_box">
+//               <h2>Total</h2>
+//               <h2>$${total_price}</h2>
+//        </div> 
+// `
 
-user_address.innerHTML = 
-`
+user_address.innerHTML =
+       `
        <h4>Billing Details</h4>
        <p id="userName">${userDetails.firstName} ${userDetails.lastName}</p>
        <p id="address">${userDetails.address1}, ${userDetails.address2}</p>
@@ -59,3 +60,7 @@ user_address.innerHTML =
        <p id="zip">${userDetails.zip}</p>
        <div><span><a href="#">Edit this address</a></span> | <span><a href="#">Add a new address</a></span></div>
 `
+
+payment_btn.addEventListener("click", function () {
+       alert("Order Placed Successfully")
+})

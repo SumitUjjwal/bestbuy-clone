@@ -1,38 +1,39 @@
-let btn=document.getElementById("search");
-btn.addEventListener("click",fetchBySearch);
+let btn = document.getElementById("search");
+btn.addEventListener("click", fetchBySearch);
 let searchVal = localStorage.getItem('searchVal');
 
-let api="https://6398c0f229930e2bb3c11afd.mockapi.io/";
-async function fetchBySearch(){
-    let val=document.getElementById("entr").value;
-    let toBesearch = api+ val;
+let api = "https://6398c0f229930e2bb3c11afd.mockapi.io/";
+async function fetchBySearch() {
+    let val = document.getElementById("entr").value;
+    let toBesearch = api + val;
     console.log(toBesearch);
-let req= await fetch(toBesearch);
-    let res=await req.json();
+    let req = await fetch(toBesearch);
+    let res = await req.json();
     console.log(res);
     renderData(res);
 }
-let prodct=document.getElementById("whole_prod");
-function renderedData(data){
-data.forEach((item)=>{
-let img=item.img_src;
-let  title=item.title;
-let model=item.model;
-let sku=item.sku-value;
-let estimates=item.Estimates;
-let color=item.color;
-let discount=item.discount;
-let fulfillment=item.fulfillment;
-let rating=item.rating;
-let review=item.reviews;
-let pre_price=item.previous_price;
-let curr_price=item.price;
-console.log(item);
-appenData(img,title,model,estimates,discount,fulfillment,review,pre_price,curr_price);
-});
+
+let prodct = document.getElementById("whole_prod");
+function renderedData(data) {
+    data.forEach((item) => {
+        let img = item.img_src;
+        let title = item.title;
+        let model = item.model;
+        let sku = item.sku - value;
+        let estimates = item.Estimates;
+        let color = item.color;
+        let discount = item.discount;
+        let fulfillment = item.fulfillment;
+        let rating = item.rating;
+        let review = item.reviews;
+        let pre_price = item.previous_price;
+        let curr_price = item.price;
+        console.log(item);
+        appenData(img, title, model, estimates, discount, fulfillment, review, pre_price, curr_price);
+    });
 }
-function appenData(img,title,model,estimates,discount,fulfillment,review,pre_price,curr_price){
-    prodct.innerHTML=`<div id="item">
+function appenData(img, title, model, estimates, discount, fulfillment, review, pre_price, curr_price) {
+    prodct.innerHTML = `<div id="item">
     <div id="prod_img">
         <img src=${img}>
     </div>
@@ -123,10 +124,10 @@ function appenData(img,title,model,estimates,discount,fulfillment,review,pre_pri
 
 //-----------------------------------------------------------------------------------------------
 
-function renderData(data){
-    prodct.innerHTML= data.map(item => {
+function renderData(data) {
+    prodct.innerHTML = data.map(item => {
 
-    return  `<div id="item">
+        return `<div id="item">
     <div id="prod_img">
         <img src=${item.img_src}>
     </div>
@@ -208,10 +209,15 @@ function renderData(data){
 <span>/mo.</span>
 <div id="disc">Save ${item.discount}</div>
 </div>
-<button id="add_to"><img src="https://cdn-icons-png.flaticon.com/512/2838/2838838.png">  Add To Cart</button>
+<button id="add_to" onclick="handleCart(${item.id})> Add To Cart</button>
 </div>
 </div>
 </div>
 </div> `
-}).join("")
+    }).join("")
+}
+
+
+async function handleCart(id) {
+    console.log(id)
 }

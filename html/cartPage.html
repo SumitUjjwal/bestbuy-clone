@@ -39,32 +39,40 @@
                      <section id="in_cart_products" class="your_cart_container_box">
 
                             <!-- 1.3.1 items -->
-                            <div id="items">
-                                   <div id="item_detail">
-                                          <img src="https://pisces.bbystatic.com/image2//BestBuy_US/images/products/5721/5721600_sd.jpg;maxHeight=200;maxWidth=200"
-                                                 alt="" id="item_detail_image">
-                                          <p id="item_detail_title">MacBook Air 13.3" Laptop - Apple M1 chip - 8GB
-                                                 Memory - 256GB SSD - Space Gray</p>
-                                   </div>
-                                   <div id="item_availability">
-                                          <form action="">
-                                                 <input type="radio" name="availability" id="pickup" required>
-                                                 <label for="pickup">Pickup at Aiea</label><br>
-                                                 <input type="radio" name="availability" id="shipping">
-                                                 <label for="shipping">Shipping to 96939</label>
-                                          </form>
-                                   </div>
-                                   <div id="item_action">
-                                          <select name="quantity" id="item_action_quantity">
-                                                 <option value="1">1</option>
-                                                 <option value="2">2</option>
-                                                 <option value="3">3</option>
-                                                 <option value="4">4</option>
-                                                 <option value="5">5</option>
-                                          </select>
-                                          <button id="item_action_remove">Remove</button>
-                                   </div>
-                                   <div id="item_price">$799.99</div>
+                            <div id="render_cards" class="render_cards">
+                                   <div class="items">
+                                           <!-- 1.3.1.1 --> 
+                                           <div class="item_detail"> 
+                                                  <!-- 1.3.1.1.1 --> 
+                                                 <img src="https://pisces.bbystatic.com/image2//BestBuy_US/images/products/5721/5721600_sd.jpg;maxHeight=200;maxWidth=200"
+                                                        alt="" class="item_detail_image">
+                                                 <!-- 1.3.1.1.2 -->
+                                                 <p class="item_detail_title">MacBook Air 13.3" Laptop - Apple M1 chip - 8GB
+                                                        Memory - 256GB SSD - Space Gray</p>
+                                          </div>
+                                          <!-- 1.3.1.2 -->
+                                          <div class="item_availability">
+                                                 <form action="">
+                                                        <input type="radio" name="availability" class="pickup" required>
+                                                        <label for="pickup">Pickup at Aiea</label><br>
+                                                        <input type="radio" name="availability" class="shipping">
+                                                        <label for="shipping">Shipping to 96939</label>
+                                                 </form>
+                                          </div> 
+                                          <!-- 1.3.1.3 -->
+                                           <div class="item_action">
+                                                 <select name="quantity" class="item_action_quantity">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                 </select>
+                                                 <button class="item_action_remove">Remove</button>
+                                          </div>
+                                          <!-- 1.3.1.4 -->
+                                          <div id="item_price">$799.99</div> 
+                                    </div>
                             </div>
 
                             <!-- 1.3.2 add-ons -->

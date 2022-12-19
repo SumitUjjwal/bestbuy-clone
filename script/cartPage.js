@@ -1,10 +1,14 @@
+
 let url = "https://6398c0f229930e2bb3c11afd.mockapi.io/laptops/";
 let item = document.getElementById("items");
 let price;
 let price_summary = document.getElementById("price_summary");
 let carousel_card = document.querySelector(".card");
-
-
+let originalPriceInput = document.querySelector('#original_price')
+let discountedPriceInput = document.querySelector('#discounted_price')
+let totalPriceInput = document.querySelector('#total_price')
+// localStorage.setItem('op', JSON.stringify(0))
+// localStorage.setItem('dp', JSON.stringify(0))
 // async function CartItems(id) {
 //        let request = await fetch(`${url}${id}`);
 //        let data = await request.json();
@@ -176,7 +180,7 @@ async function cardItems(id) {
 // }
 
 
-let LSid = [1, 2, 3];
+let LSid = JSON.parse(localStorage.getItem('cartItem')) || [];
 
 // show(LSid)
 
@@ -197,6 +201,8 @@ async function show(LSid) {
 renderCards()
 
 function getAsCard(item) {
+
+       let obj = {};
 
 
        let items = document.createElement('div');
@@ -289,14 +295,37 @@ function getAsCard(item) {
        return items;
 
 }
-
+let originalPrice = [];
+let itemArr = [];
+let discountPrice = 0;
 async function renderCards() {
-       let itemArr = [];
        let render_div = document.getElementById("render_cards");
 
        await LSid.forEach(id => {
               cardItems(id).then(data => {
+                     // calculateData(data)
                      render_div.append(getAsCard(data))
+                     
               })
        })
+       // updateOrderSummary()
+}
+function calculateData(data) {
+       let op = JSON.parse(localStorage.getItem('op') || 0)  
+       let dp = JSON.parse(localStorage.getItem('dp') || 0) 
+       op += +data.previous_price;
+       dp += +data.price
+       
+       localStorage.setItem('op', JSON.stringify(op))
+       localStorage.setItem('dp', JSON.stringify(dp))
+       console.log('op',op,'dp',dp)
+}
+
+function updateOrderSummary(originalPrice, discountPrice) {
+       let op = JSON.parse(localStorage.getItem('op')) 
+       let dp = JSON.parse(localStorage.getItem('dp')) 
+       originalPriceInput.innerText = op;
+       discountedPriceInput.innerText = dp;
+       totalPriceInput.innerText = op - dp;
+       console.log('originalPrice', op, 'discountPrice', dp)
 }

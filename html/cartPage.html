@@ -9,6 +9,8 @@
        <link rel="stylesheet" href="/obnoxious-ladybug-6279/style/cartPage.css">
        <link rel="stylesheet" href="../style/utility.css">
        <link rel="stylesheet" href="../style/navBar.css">
+       <script src="../script/nav.js" defer></script>
+
        <link rel="stylesheet" href="../style/footer.css">
        <!-- <link rel="stylesheet" href="/obnoxious-ladybug-6279/style/utility.css"> -->
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -19,8 +21,8 @@
 
 <body>
 
-        <!--! --- navigation--- -->
-        <header>
+       <!--! --- navigation--- -->
+       <header>
               <div class="top_nav_container">
                      <!-- top nav bar -->
                      <div class="top_nav">
@@ -32,20 +34,17 @@
                                    </div>
                                    <div class="top_nav_menu">
                                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                 fill="currentColor"
-                                                 class="bi bi-list"
-                                                 viewBox="0 0 16 16">
+                                                 fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                                                  <path fill-rule="evenodd"
                                                         d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
                                           </svg>
                                           <p>Menu</p>
                                    </div>
                                    <div class="top_nav_input">
-                                         <input type="text" placeholder="Search Product Here">                                          <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                                          <input type="text" placeholder="Search Product Here">
+                                          <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
                                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                 fill="currentColor"
-                                                 class="bi bi-search"
-                                                 viewBox="0 0 16 16">
+                                                 fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                                  <path
                                                         d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                                           </svg>
@@ -55,8 +54,7 @@
 
                                    <div class="top_nav_store">
                                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                 fill="currentColor"
-                                                 class="bi bi-shop-window" viewBox="0 0 16 16">
+                                                 fill="currentColor" class="bi bi-shop-window" viewBox="0 0 16 16">
                                                  <path
                                                         d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zm2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5z" />
                                           </svg>
@@ -64,9 +62,7 @@
                                    </div>
                                    <div class="top_nav_cart">
                                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                 fill="currentColor"
-                                                 class="bi bi-cart3"
-                                                 viewBox="0 0 16 16">
+                                                 fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
                                                  <path
                                                         d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                                           </svg>
@@ -130,7 +126,7 @@
                      <section id="in_cart_products" class="your_cart_container_box">
 
                             <!-- 1.3.1 items -->
-                            <div id="items">
+                            <!-- <div id="items">
                                    <div id="item_detail">
                                           <img src="https://pisces.bbystatic.com/image2//BestBuy_US/images/products/5721/5721600_sd.jpg;maxHeight=200;maxWidth=200"
                                                  alt="" id="item_detail_image">
@@ -156,6 +152,42 @@
                                           <button id="item_action_remove">Remove</button>
                                    </div>
                                    <div id="item_price">$799.99</div>
+                            </div> -->
+
+                            <div id="render_cards" class="render_cards">
+                                   <!-- <div class="items">
+                                          1.3.1.1
+                                          <div class="item_detail">
+                                                 1.3.1.1.1
+                                                 <img src="https://pisces.bbystatic.com/image2//BestBuy_US/images/products/5721/5721600_sd.jpg;maxHeight=200;maxWidth=200"
+                                                        alt="" class="item_detail_image">
+                                                 1.3.1.1.2
+                                                 <p class="item_detail_title">MacBook Air 13.3" Laptop - Apple M1 chip - 8GB
+                                                        Memory - 256GB SSD - Space Gray</p>
+                                          </div>
+                                          1.3.1.2
+                                          <div class="item_availability">
+                                                 <form action="">
+                                                        <input type="radio" name="availability" class="pickup" required>
+                                                        <label for="pickup">Pickup at Aiea</label><br>
+                                                        <input type="radio" name="availability" class="shipping">
+                                                        <label for="shipping">Shipping to 96939</label>
+                                                 </form>
+                                          </div>
+                                          1.3.1.3
+                                          <div class="item_action">
+                                                 <select name="quantity" class="item_action_quantity">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                 </select>
+                                                 <button class="item_action_remove">Remove</button>
+                                          </div>
+                                          1.3.1.4
+                                          <div id="item_price">$799.99</div>
+                                   </div> -->
                             </div>
 
                             <!-- 1.3.2 add-ons -->
@@ -237,7 +269,9 @@
                                                                       src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6510/6510531_sd.jpg;maxHeight=200;maxWidth=300"
                                                                       alt="Card image cap" width="100%" height="200px">
                                                                <div class="card-body">
-                                                                      <h5 class="card-title">HP - 15.6\" Touch-Screen - Laptop - Intel Core i5 - 12GB Memory - 256GB SSD - Natural Silver</h5>
+                                                                      <h5 class="card-title">HP - 15.6\" Touch-Screen -
+                                                                             Laptop - Intel Core i5 - 12GB Memory -
+                                                                             256GB SSD - Natural Silver</h5>
                                                                       <p class="card-text">$553.99</p>
                                                                       <button class="card-button">Add to Cart</button>
                                                                </div>
@@ -247,7 +281,9 @@
                                                                       src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6469/6469399_sd.jpg;maxHeight=200;maxWidth=300"
                                                                       alt="Card image cap" width="100%" height="200px">
                                                                <div class="card-body">
-                                                                      <h5 class="card-title">ASUS - Vivobook 17.3\" Laptop - Intel Core 10th Gen i5 - 12GB Memory - 1TB HDD</h5>
+                                                                      <h5 class="card-title">ASUS - Vivobook 17.3\"
+                                                                             Laptop - Intel Core 10th Gen i5 - 12GB
+                                                                             Memory - 1TB HDD</h5>
                                                                       <p class="card-text">$271.99</p>
                                                                       <button class="card-button">Add to Cart</button>
                                                                </div>
@@ -257,7 +293,9 @@
                                                                       src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6513/6513085_sd.jpg;maxHeight=200;maxWidth=300"
                                                                       alt="Card image cap" width="100%" height="200px">
                                                                <div class="card-body">
-                                                                      <h5 class="card-title">ASUS - 14\" Chromebook - Intel Core M3-8100Y - 8GB Memory - 64GB eMMC - Silver</h5>
+                                                                      <h5 class="card-title">ASUS - 14\" Chromebook -
+                                                                             Intel Core M3-8100Y - 8GB Memory - 64GB
+                                                                             eMMC - Silver</h5>
                                                                       <p class="card-text">$120.99</p>
                                                                       <button class="card-button">Add to Cart</button>
                                                                </div>
@@ -272,7 +310,9 @@
                                                                       src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6510/6510528_sd.jpg;maxHeight=200;maxWidth=300"
                                                                       alt="Card image cap" width="100%" height="200px">
                                                                <div class="card-body">
-                                                                      <h5 class="card-title">HP - 15.6\" Touch-Screen Laptop - Intel Core i3 - 8GB Memory - 256GB SSD - Natural Silver</h5>
+                                                                      <h5 class="card-title">HP - 15.6\" Touch-Screen
+                                                                             Laptop - Intel Core i3 - 8GB Memory - 256GB
+                                                                             SSD - Natural Silver</h5>
                                                                       <p class="card-text">$295.99</p>
                                                                       <button class="card-button">Add to Cart</button>
                                                                </div>
@@ -282,7 +322,9 @@
                                                                       src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6511/6511315_sd.jpg;maxHeight=200;maxWidth=300"
                                                                       alt="Card image cap" width="100%" height="200px">
                                                                <div class="card-body">
-                                                                      <h5 class="card-title">Dell - Inspiron 3511 15.6\" Touch Laptop - Intel Core i5 - 8GB Memory - 256GB Solid State Drive - Black</h5>
+                                                                      <h5 class="card-title">Dell - Inspiron 3511 15.6\"
+                                                                             Touch Laptop - Intel Core i5 - 8GB Memory -
+                                                                             256GB Solid State Drive - Black</h5>
                                                                       <p class="card-text">$356.99</p>
                                                                       <button class="card-button">Add to Cart</button>
                                                                </div>
@@ -292,7 +334,9 @@
                                                                       src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6477/6477889_sd.jpg;maxHeight=200;maxWidth=300"
                                                                       alt="Card image cap" width="100%" height="200px">
                                                                <div class="card-body">
-                                                                      <h5 class="card-title">HP - 15.6\" Touch-Screen Laptop - Intel Core i7 - 16GB Memory - 512GB SSD - Natural Silver</h5>
+                                                                      <h5 class="card-title">HP - 15.6\" Touch-Screen
+                                                                             Laptop - Intel Core i7 - 16GB Memory -
+                                                                             512GB SSD - Natural Silver</h5>
                                                                       <p class="card-text">$703.99</p>
                                                                       <button class="card-button">Add to Cart</button>
                                                                </div>
@@ -308,7 +352,9 @@
                                                                       src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6510/6510527_sd.jpg;maxHeight=200;maxWidth=300"
                                                                       alt="Card image cap" width="100%" height="200px">
                                                                <div class="card-body">
-                                                                      <h5 class="card-title">HP - 15.6\" Touch-Screen Laptop - Intel Core i5 - 8GB Memory - 512GB SSD - Natural Silver</h5>
+                                                                      <h5 class="card-title">HP - 15.6\" Touch-Screen
+                                                                             Laptop - Intel Core i5 - 8GB Memory - 512GB
+                                                                             SSD - Natural Silver</h5>
                                                                       <p class="card-text">$350.99</p>
                                                                       <button class="card-button">Add to Cart</button>
                                                                </div>
@@ -318,8 +364,11 @@
                                                                       src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6501/6501593_sd.jpg;maxHeight=200;maxWidth=300"
                                                                       alt="Card image cap" width="100%" height="200px">
                                                                <div class="card-body">
-                                                                      <h5 class="card-title">Samsung - Galaxy Book2 Pro 360 2-in-1 15.6” AMOLED Touch Screen Laptop - Intel 12th Gen Evo Core i7 - 16GB DDR5 Memory –
-                                                                      1TB SSD - Silver</h5>
+                                                                      <h5 class="card-title">Samsung - Galaxy Book2 Pro
+                                                                             360 2-in-1 15.6” AMOLED Touch Screen Laptop
+                                                                             - Intel 12th Gen Evo Core i7 - 16GB DDR5
+                                                                             Memory –
+                                                                             1TB SSD - Silver</h5>
                                                                       <p class="card-text">$1,009.99</p>
                                                                       <button class="card-button">Add to Cart</button>
                                                                </div>
@@ -329,7 +378,9 @@
                                                                       src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6511/6511950_sd.jpg;maxHeight=200;maxWidth=300"
                                                                       alt="Card image cap" width="100%" height="200px">
                                                                <div class="card-body">
-                                                                      <h5 class="card-title">Lenovo - Ideapad 3i 15.6\" HD Touch Laptop - Core i3-1115G4 - 8GB Memory - 256GB SSD - Platinum Grey</h5>
+                                                                      <h5 class="card-title">Lenovo - Ideapad 3i 15.6\"
+                                                                             HD Touch Laptop - Core i3-1115G4 - 8GB
+                                                                             Memory - 256GB SSD - Platinum Grey</h5>
                                                                       <p class="card-text">$234.99</p>
                                                                       <button class="card-button">Add to Cart</button>
                                                                </div>
@@ -360,11 +411,11 @@
                      <div id="price_summary">
                             <div id="price_summary_line1" class="summary_line">
                                    <span> Original Price </span>
-                                   <span> $999.99 </span>
+                                   <span id="original_price"> $999.99 </span>
                             </div>
                             <div id="price_summary_line2" class="summary_line">
                                    <span> Savings </span>
-                                   <span> -$200.00 </span>
+                                   <span id="discounted_price"> -$200.00 </span>
                             </div>
                             <div id="price_summary_line3" class="summary_line">
                                    <span> Store Pickup </span>
@@ -376,7 +427,7 @@
                             </div>
                             <div id="total_price" class="summary_line">
                                    <h4>Total</h4>
-                                   <h4>$837.69</h4>
+                                   <h4 id="total_price">$837.69</h4>
                             </div>
                      </div>
 
@@ -408,135 +459,137 @@
               </div>
        </div>
 
-         <!-- footer -->
-     <footer>
-       <div class="sec_1">
-           <div>
-               <div>
-                   <i class="fa-regular fa-circle-question font-60"></i>
-               </div>
-               <a href="#">Visit Our Support Center</a>
-           </div>
-           <div>
-               <div>
-                   <i class="fa-solid fa-dolly font-60"></i>
-               </div>
-               <a href="#">Check your Order Status</a>
-           </div>
-           <div>
-               <div>
-                   <i class="fa-solid fa-truck-fast font-60"></i>
-               </div>
-               <a href="#">Shipping, Delivery & Store Pickup</a>
-           </div>
-           <div>
-               <div>
-                   <i class="fa-solid fa-right-left font-60"></i>
-               </div>
-               <a href="#">Returns & Exchanges</a>
-           </div>
-           <div>
-               <div>
-                   <i class="fa-solid fa-dollar-sign font-60"></i>
-               </div>
-               <a href="#">Price Match Guarantee</a>
-           </div>
-       </div>
-       <div class="hl"></div>
-       <div class="sec_2">
-           <div id="sec_2-1">
-               <div>
-                   <h3>Order & Purchases</h3>
-                   <p>Check Order Status</p>
-                   <p>Shipping, Delivery & Pickup</p>
-                   <p>Returns & Exchanges</p>
-               </div>
-               <div>
-                   <h3>Support & Services</h3>
-                   <p>Visit our Support Center</p>
-                   <p>Shop with an Expert</p>
-                   <p>Schedule a Service</p>
-               </div>
-               <div>
-                   <h3>Partnerships</h3>
-                   <p>Digital Basket Totaltech</p>
-                   <p>My Digital Basket</p>
-                   <p>View Points & Certificates</p>
-                   <p>Member Offers</p>
-               </div>
-               <div>
-                   <h3>Payment Options</h3>
-                   <p>Affiliate Program</p>
-                   <p>Advertise with Us</p>
-                   <p>Developers</p>
-               </div>
-               <div>
-                   <h3>Rewards & Membership</h3>
-                   <p>My Digital Basket® Credit Card</p>
-                   <p>Pay Your Bill at Citibank</p>
-                   <p>Lease to Own</p>
-               </div>
-               <div>
-                   <h3>About Digital Basket</h3>
-                   <p> Corporate Information</p>
-                   <p>Careers</p>
-                   <p>Corporate Responsibility & Sustainability</p>
-                   <p>Discover & Learn</p>
-               </div>
-           </div>
-           <div id="footer_form">
-               <h2>Sign in or Create Account</h2>
-               <div class="hl"></div>
-               <h3>Get the latest deals and more.</h3>
-               <div class=".footer_email_form">
-                   <input type="text" placeholder="Enter email Address">
-                   <input type="submit" value="Sign Up">
-               </div>
-               <div class="hl" style="margin-top: 30px;"></div>
-               <div>
-                   <i class="fa-solid fa-mobile"></i>
-                   <div>
-                       <span>Digital Basket App </span>
-                       <span>Learn more ></span>
-                   </div>
-               </div>
-               <div class="hl"></div>
-               <div>
-                   <i class="fa-brands fa-facebook"></i>
-                   <i class="fa-brands fa-twitter"></i>
-                   <i class="fa-brands fa-instagram"></i>
-                   <i class="fa-brands fa-pinterest"></i>
-                   <i class="fa-brands fa-youtube"></i>
-               </div>
-               <div class="hl"></div>
-               <p>Forums, blogs & more</p>
-           </div>
-       </div>
-       <div>
-           <p>How was your experience?<span>Give feedback about our website</span></p>
-           <div>
-               <p>Mobile Site</p>
-               <p>Digital Basket Canada</p>
-           </div>
-       </div>
-       <div class="hl"></div>
-       <div id="sec_3">
-           <div>
-               <p>Accessibility</p>
-               <p>Terms & Conditions</p>
-               <p>Privacy</p>
-               <p>Interest-Based Ads</p>
-               <p>California Privacy Rights</p>
-               <p>Do Not Sell My Personal Information</p>
-               <p>California Supply Chain Transparency Act</p>
-           </div>
-           <div>
-               In-store pricing may vary. Prices and offers are subject to change. © 2022 Digital Basket. All rights
-               reserved. Digital Basket, the Digital Basket logo, the tag design, and MY Digital Basket are trademarks of Digital Basket and
-               its affiliated companies.
-           </div>
-       </div>
-   </footer>
+       <!-- footer -->
+       <footer>
+              <div class="sec_1">
+                     <div>
+                            <div>
+                                   <i class="fa-regular fa-circle-question font-60"></i>
+                            </div>
+                            <a href="#">Visit Our Support Center</a>
+                     </div>
+                     <div>
+                            <div>
+                                   <i class="fa-solid fa-dolly font-60"></i>
+                            </div>
+                            <a href="#">Check your Order Status</a>
+                     </div>
+                     <div>
+                            <div>
+                                   <i class="fa-solid fa-truck-fast font-60"></i>
+                            </div>
+                            <a href="#">Shipping, Delivery & Store Pickup</a>
+                     </div>
+                     <div>
+                            <div>
+                                   <i class="fa-solid fa-right-left font-60"></i>
+                            </div>
+                            <a href="#">Returns & Exchanges</a>
+                     </div>
+                     <div>
+                            <div>
+                                   <i class="fa-solid fa-dollar-sign font-60"></i>
+                            </div>
+                            <a href="#">Price Match Guarantee</a>
+                     </div>
+              </div>
+              <div class="hl"></div>
+              <div class="sec_2">
+                     <div id="sec_2-1">
+                            <div>
+                                   <h3>Order & Purchases</h3>
+                                   <p>Check Order Status</p>
+                                   <p>Shipping, Delivery & Pickup</p>
+                                   <p>Returns & Exchanges</p>
+                            </div>
+                            <div>
+                                   <h3>Support & Services</h3>
+                                   <p>Visit our Support Center</p>
+                                   <p>Shop with an Expert</p>
+                                   <p>Schedule a Service</p>
+                            </div>
+                            <div>
+                                   <h3>Partnerships</h3>
+                                   <p>Digital Basket Totaltech</p>
+                                   <p>My Digital Basket</p>
+                                   <p>View Points & Certificates</p>
+                                   <p>Member Offers</p>
+                            </div>
+                            <div>
+                                   <h3>Payment Options</h3>
+                                   <p>Affiliate Program</p>
+                                   <p>Advertise with Us</p>
+                                   <p>Developers</p>
+                            </div>
+                            <div>
+                                   <h3>Rewards & Membership</h3>
+                                   <p>My Digital Basket® Credit Card</p>
+                                   <p>Pay Your Bill at Citibank</p>
+                                   <p>Lease to Own</p>
+                            </div>
+                            <div>
+                                   <h3>About Digital Basket</h3>
+                                   <p> Corporate Information</p>
+                                   <p>Careers</p>
+                                   <p>Corporate Responsibility & Sustainability</p>
+                                   <p>Discover & Learn</p>
+                            </div>
+                     </div>
+                     <div id="footer_form">
+                            <h2>Sign in or Create Account</h2>
+                            <div class="hl"></div>
+                            <h3>Get the latest deals and more.</h3>
+                            <div class=".footer_email_form">
+                                   <input type="text" placeholder="Enter email Address">
+                                   <input type="submit" value="Sign Up">
+                            </div>
+                            <div class="hl" style="margin-top: 30px;"></div>
+                            <div>
+                                   <i class="fa-solid fa-mobile"></i>
+                                   <div>
+                                          <span>Digital Basket App </span>
+                                          <span>Learn more ></span>
+                                   </div>
+                            </div>
+                            <div class="hl"></div>
+                            <div>
+                                   <i class="fa-brands fa-facebook"></i>
+                                   <i class="fa-brands fa-twitter"></i>
+                                   <i class="fa-brands fa-instagram"></i>
+                                   <i class="fa-brands fa-pinterest"></i>
+                                   <i class="fa-brands fa-youtube"></i>
+                            </div>
+                            <div class="hl"></div>
+                            <p>Forums, blogs & more</p>
+                     </div>
+              </div>
+              <div>
+                     <p>How was your experience?<span>Give feedback about our website</span></p>
+                     <div>
+                            <p>Mobile Site</p>
+                            <p>Digital Basket Canada</p>
+                     </div>
+              </div>
+              <div class="hl"></div>
+              <div id="sec_3">
+                     <div>
+                            <p>Accessibility</p>
+                            <p>Terms & Conditions</p>
+                            <p>Privacy</p>
+                            <p>Interest-Based Ads</p>
+                            <p>California Privacy Rights</p>
+                            <p>Do Not Sell My Personal Information</p>
+                            <p>California Supply Chain Transparency Act</p>
+                     </div>
+                     <div>
+                            In-store pricing may vary. Prices and offers are subject to change. © 2022 Digital Basket.
+                            All rights
+                            reserved. Digital Basket, the Digital Basket logo, the tag design, and MY Digital Basket are
+                            trademarks of Digital Basket and
+                            its affiliated companies.
+                     </div>
+              </div>
+       </footer>
 </body>
 <script src="/obnoxious-ladybug-6279/script/cartPage.js"></script>
 

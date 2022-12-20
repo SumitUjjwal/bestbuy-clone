@@ -226,6 +226,10 @@
        display: block;
 }
 
+.left_checkout_order_details, .right_checkout_shipping{
+       display: none;
+}
+
 @media screen and (max-width: 480px) {
        .checkout_container {
               width: 90%;

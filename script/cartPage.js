@@ -6,7 +6,8 @@ let price_summary = document.getElementById("price_summary");
 let carousel_card = document.querySelector(".card");
 let originalPriceInput = document.querySelector('#original_price')
 let discountedPriceInput = document.querySelector('#discounted_price')
-let totalPriceInput = document.querySelector('#total_price')
+let totalPriceInput = document.querySelector('#total_price_num')
+let taxPriceInput = document.getElementById("tax_price")
 // localStorage.setItem('op', JSON.stringify(0))
 // localStorage.setItem('dp', JSON.stringify(0))
 // async function CartItems(id) {
@@ -131,35 +132,46 @@ let totalPriceInput = document.querySelector('#total_price')
 
 // carousel_card_data();
 
-async function show_price_summary(price_value) {
-       let discount = ((price_value / 100) * 23).toFixed(2);
-       let sales_tax = (((price_value - discount) / 100) * 18).toFixed(2);
-       let total_value = (+price_value - +discount + +sales_tax).toFixed(2);
-       sessionStorage.setItem("total_price", total_value);
-       sessionStorage.setItem("tax", sales_tax);
-       price_summary.innerHTML =
-              `
-       <div id="price_summary_line1" class="summary_line">
-              <span> Original Price </span>
-                                   <span> $${price_value} </span>
-                            </div>
-                            <div id="price_summary_line2" class="summary_line">
-                                   <span> Savings </span>
-                                   <span> -$${discount} </span>
-                            </div>
-                            <div id="price_summary_line3" class="summary_line">
-                                   <span> Store Pickup </span>
-                                   <span> FREE </span>
-                            </div>
-                            <div id="price_summary_line4" class="summary_line">
-                                   <span> Estimated Sales Tax </span>
-                                   <span> $${sales_tax} </span>
-                            </div>
-                            <div id="total_price" class="summary_line">
-                                   <h4>Total</h4>
-                                   <h4>$${total_value}</h4>
-                            </div>
-       `
+// async function show_price_summary(price_value) {
+//        let discount = ((price_value / 100) * 23).toFixed(2);
+//        let sales_tax = (((price_value - discount) / 100) * 18).toFixed(2);
+//        let total_value = (+price_value - +discount + +sales_tax).toFixed(2);
+//        sessionStorage.setItem("total_price", total_value);
+//        sessionStorage.setItem("tax", sales_tax);
+//        price_summary.innerHTML =
+//               `
+//        <div id="price_summary_line1" class="summary_line">
+//               <span> Original Price </span>
+//                                    <span> $${price_value} </span>
+//                             </div>
+//                             <div id="price_summary_line2" class="summary_line">
+//                                    <span> Savings </span>
+//                                    <span> -$${discount} </span>
+//                             </div>
+//                             <div id="price_summary_line3" class="summary_line">
+//                                    <span> Store Pickup </span>
+//                                    <span> FREE </span>
+//                             </div>
+//                             <div id="price_summary_line4" class="summary_line">
+//                                    <span> Estimated Sales Tax </span>
+//                                    <span> $${sales_tax} </span>
+//                             </div>
+//                             <div id="total_price" class="summary_line">
+//                                    <h4>Total</h4>
+//                                    <h4>$${total_value}</h4>
+//                             </div>
+//        `
+// }
+
+let check_item = JSON.parse(localStorage.getItem("cartItem")) || null;
+let cart_container = document.getElementById("cart_main_container");
+let empty_container = document.getElementById("empty_main_container");
+
+if(check_item == null){
+       empty_container.style.display = "none"
+}
+else{
+       cart_container.style.display = "flex";
 }
 
 async function cardItems(id) {
@@ -184,20 +196,20 @@ let LSid = JSON.parse(localStorage.getItem('cartItem')) || [];
 
 // show(LSid)
 
-async function show(LSid) {
-       let arr = [];
-       await LSid.forEach(id => {
-              let data = cardItems(id);
-              data.then((cardData) => {
-                     arr.push(cardData)
-              })
-       });
-       console.log(arr.length)
-       for (let key in arr) {
-              console.log(arr[key])
-       }
-       // renderCards(arr)
-}
+// async function show(LSid) {
+//        let arr = [];
+//        await LSid.forEach(id => {
+//               let data = cardItems(id);
+//               data.then((cardData) => {
+//                      arr.push(cardData)
+//               })
+//        });
+//        console.log(arr.length)
+//        for (let key in arr) {
+//               console.log(arr[key])
+//        }
+//        // renderCards(arr)
+// }
 renderCards()
 
 function getAsCard(item) {
@@ -295,37 +307,50 @@ function getAsCard(item) {
        return items;
 
 }
-let originalPrice = [];
+let originalPrice = 0;
 let itemArr = [];
 let discountPrice = 0;
+let op = 0;
 async function renderCards() {
        let render_div = document.getElementById("render_cards");
 
        await LSid.forEach(id => {
               cardItems(id).then(data => {
+                     originalPrice += +data.previous_price;
+                     discountPrice += +data.price;
+                     // let tax = (((dp) / 100) * 18).toFixed(2);
+
+                     localStorage.setItem("op", JSON.stringify(originalPrice))
+                     localStorage.setItem("dp", JSON.stringify(discountPrice))
+                     // sessionStorage.setItem("tax", JSON.stringify(tax))
                      // calculateData(data)
+                     updateOrderSummary()
                      render_div.append(getAsCard(data))
-                     
+
               })
        })
-       // updateOrderSummary()
+
 }
 function calculateData(data) {
-       let op = JSON.parse(localStorage.getItem('op') || 0)  
-       let dp = JSON.parse(localStorage.getItem('dp') || 0) 
-       op += +data.previous_price;
-       dp += +data.price
-       
-       localStorage.setItem('op', JSON.stringify(op))
-       localStorage.setItem('dp', JSON.stringify(dp))
-       console.log('op',op,'dp',dp)
+       let op = JSON.parse(localStorage.getItem('op') || 0)
+       let dp = JSON.parse(localStorage.getItem('dp') || 0)
+       // op += +data.previous_price;
+       // dp += +data.price;
+
+       // sessionStorage.setItem('op', JSON.stringify(op))
+       // sessionStorage.setItem('dp', JSON.stringify(dp))
+       // console.log('op', op, 'dp', dp)
+       updateOrderSummary()
 }
 
 function updateOrderSummary(originalPrice, discountPrice) {
-       let op = JSON.parse(localStorage.getItem('op')) 
-       let dp = JSON.parse(localStorage.getItem('dp')) 
-       originalPriceInput.innerText = op;
-       discountedPriceInput.innerText = dp;
-       totalPriceInput.innerText = op - dp;
-       console.log('originalPrice', op, 'discountPrice', dp)
+       let op = JSON.parse(localStorage.getItem('op'))
+       let dp = JSON.parse(localStorage.getItem('dp'))
+       let tax = (((dp) / 100) * 18).toFixed(2);
+       
+       originalPriceInput.innerText = `$${op.toFixed(2) }`;
+       discountedPriceInput.innerText = `$${dp.toFixed(2) }`;
+       taxPriceInput.innerText = `$${tax}`
+       totalPriceInput.innerText = `$${(+dp + +tax).toFixed(2) }`;
+       // console.log('originalPrice', op, 'discountPrice', dp)
 }

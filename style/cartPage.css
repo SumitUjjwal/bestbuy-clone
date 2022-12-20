@@ -8,7 +8,7 @@
 }
 /* main container */
 #cart_main_container {
-       display: flex;
+       display: none;
        width: 90%;
        margin: 20px auto;
        justify-content: space-between;

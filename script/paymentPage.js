@@ -3,7 +3,7 @@ let img_src = sessionStorage.getItem("img_src");
 let title = sessionStorage.getItem("title");
 let price = JSON.parse(localStorage.getItem('dp'))
 let tax = (((+price) / 100) * 18).toFixed(2);
-let total_price = +price + +tax;
+let total_price = (+price + +tax).toFixed(2);
 let qty = sessionStorage.getItem("qty");
 let userDetails = JSON.parse(sessionStorage.getItem("user_details"));
 

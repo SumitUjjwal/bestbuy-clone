@@ -65,11 +65,17 @@
        display: flex;
        justify-content: space-evenly;
        align-items: center;
+       /* width: 60%; */
 }
 
+.item_detail_image{
+       /* width: 30%; */
+}
 .item_detail img {
        /* width: 10%; */
        width: 100px;
+       /* height: 10%; */
+       height: 200px;
 }
 
 .item_availability {

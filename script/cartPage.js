@@ -1,5 +1,7 @@
 
-let url = "https://6398c0f229930e2bb3c11afd.mockapi.io/laptops/";
+
+let url = `https://6398c0f229930e2bb3c11afd.mockapi.io/`;
+console.log(url)
 let item = document.getElementById("items");
 let price;
 let price_summary = document.getElementById("price_summary");
@@ -175,7 +177,9 @@ else{
 }
 
 async function cardItems(id) {
-       let request = await fetch(`${url}${id}`);
+       let category = localStorage.getItem("searchVal");
+       console.log(category)
+       let request = await fetch(`https://6398c0f229930e2bb3c11afd.mockapi.io/${category}/${id}`);
        let data = await request.json();
        return data;
        // console.log(data)

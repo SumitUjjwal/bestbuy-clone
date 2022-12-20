@@ -2,8 +2,10 @@
 let img_src = sessionStorage.getItem("img_src");
 let title = sessionStorage.getItem("title");
 let price = JSON.parse(localStorage.getItem('dp'))
+let original_price = JSON.parse(localStorage.getItem('op'))
 let tax = (((+price) / 100) * 18).toFixed(2);
 let total_price = (+price + +tax).toFixed(2);
+let saved_price = (+original_price - +price).toFixed(2);
 let qty = sessionStorage.getItem("qty");
 
 // let price = (total_price-tax).toFixed(2);
@@ -14,6 +16,7 @@ let right_checkout_price = document.getElementById("right_checkout_price");
 let address_subm_btn = document.getElementById("address_subm");
 let form = document.getElementById("add_form");
 let address = document.getElementById("userAddress");
+let saving = document.getElementById("saving");
 
 // setting details on DOM
 // item_details.innerHTML = 
@@ -64,6 +67,7 @@ let checkout_total = document.getElementById("checkout_total");
 checkout_price.innerText = `$${price}`;
 checkout_tax.innerText = `$${tax}`;
 checkout_total.innerText = `$${total_price}`;
+saving.innerText = `You're saving $${saved_price} on your order today!`;
 
 // adding event listener to address button
 

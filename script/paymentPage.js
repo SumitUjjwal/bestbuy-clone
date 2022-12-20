@@ -1,9 +1,11 @@
 // getting items from sessionStorage
 let img_src = sessionStorage.getItem("img_src");
 let title = sessionStorage.getItem("title");
-let price = JSON.parse(localStorage.getItem('dp'))
+let price = JSON.parse(localStorage.getItem('dp'));
+let original_price = JSON.parse(localStorage.getItem('op'));
 let tax = (((+price) / 100) * 18).toFixed(2);
 let total_price = (+price + +tax).toFixed(2);
+let saved_price = (+original_price - +price).toFixed(2);
 let qty = sessionStorage.getItem("qty");
 let userDetails = JSON.parse(sessionStorage.getItem("user_details"));
 
@@ -30,6 +32,7 @@ let checkout_total = document.getElementById("checkout_total");
 checkout_price.innerText = `$${price}`;
 checkout_tax.innerText = `$${tax}`;
 checkout_total.innerText = `$${total_price}`;
+saving.innerText = `You're saving $${saved_price} on your order today!`;
 
 
 

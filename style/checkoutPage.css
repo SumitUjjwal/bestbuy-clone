@@ -230,7 +230,7 @@
        display: none;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
        .checkout_container {
               width: 90%;
               flex-direction: column;

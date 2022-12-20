@@ -86,6 +86,7 @@ function renderData(data, type) {
     let btnArr = document.querySelectorAll('.product_payment>button')
     btnArr.forEach(btn => {
         btn.addEventListener('click', (e) => {
+            e.target.innerText = 'Added in Cart';
             cartArr.push(e.target.id)
             localStorage.setItem('cartItem', JSON.stringify(cartArr))
         })

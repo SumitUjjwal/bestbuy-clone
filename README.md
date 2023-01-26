@@ -1,15 +1,15 @@
-### obnoxious-ladybug-6279
+# obnoxious-ladybug-6279
 
-### Important Points
- ## - Use dedicated folders for relevant files.
- ## - All script files should be inside script folder.
- ## - Must add 'utility.css' in your html page. 
- ## - keep your id and class names unique and should follow this structure: <working area>_<working component>.
- ## - Don't hard code any layout component,  use flex and grid.
- ## - Use connectors for accessing child in parent div, don't use too much Id's and classed. 
- ## - use clean nested structure
+## Important Points
+ ### - Use dedicated folders for relevant files.
+ ### - All script files should be inside script folder.
+ ### - Must add 'utility.css' in your html page. 
+ ### - keep your id and class names unique and should follow this structure: <working area>_<working component>.
+ ### - Don't hard code any layout component,  use flex and grid.
+ ### - Use connectors for accessing child in parent div, don't use too much Id's and classed. 
+ ### - use clean nested structure
 
- # API docs : 
+# API docs : 
 https://www.npmjs.com/package/json-server
 ------------------------------------------------------------->
 ## Base API URL : https://6398c0f229930e2bb3c11afd.mockapi.io

@@ -10,7 +10,6 @@
  ### - use clean nested structure
 
 # API docs : 
-https://www.npmjs.com/package/json-server
 ------------------------------------------------------------->
 ## Base API URL : https://6398c0f229930e2bb3c11afd.mockapi.io
 ## we have 2 categories of products: ### mobiles and laptops
@@ -22,16 +21,9 @@ https://www.npmjs.com/package/json-server
 ### Eveyone create daily branche - <student_code>_day-<day number>
 ### eveyone link this utility file in there html :- syles > utility.css
 
+# Media Queries
 ------------------------------------------------------------->
-
-window.location.href = "";
-
-------------------------------------------------------------->
- @media all and (min-width: 768px) and (max-width: 1024px) Large screen 
- @media all and (min-width: 481px) and (max-width: 767px)   medium screen
- @media all and (max-width: 480px) small screen
-------------------------------------------------------------->
- for getting the object length use this:
- Object.key(obj).length;
- 
+ ### large screen - @media all and (min-width: 768px) and (max-width: 1024px) 
+ ### medium screen - @media all and (min-width: 481px) and (max-width: 767px)   
+ ### small screen - @media all and (max-width: 480px) 
 ------------------------------------------------------------->

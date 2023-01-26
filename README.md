@@ -10,7 +10,7 @@
  ### - use clean nested structure
 
 # API docs : 
-------------------------------------------------------------->
+
 ## Base API URL : https://6398c0f229930e2bb3c11afd.mockapi.io
 ## we have 2 categories of products: ### mobiles and laptops
 ### GET ---->  `${baseURL}/products`
@@ -22,8 +22,8 @@
 ### eveyone link this utility file in there html :- syles > utility.css
 
 # Media Queries
-------------------------------------------------------------->
+
  ### large screen - @media all and (min-width: 768px) and (max-width: 1024px) 
  ### medium screen - @media all and (min-width: 481px) and (max-width: 767px)   
  ### small screen - @media all and (max-width: 480px) 
-------------------------------------------------------------->
+
